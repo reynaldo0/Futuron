@@ -69,7 +69,7 @@ const Roadmap = () => {
               <div
                 key={index}
                 className={`relative flex flex-col items-center cursor-pointer group mb-8 lg:mb-0 lg:mx-4 ${
-                  index === selectedMilestoneIndex ? "scale-125" : ""
+                  index === selectedMilestoneIndex ? "md:scale-125" : ""
                 }`}
                 onMouseEnter={() => handleHover(index)}
                 onClick={() => handleHover(index)}
