@@ -17,12 +17,12 @@ const Simulations = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-100 mb-8">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8">
           Simulasi Masa Depan Bumi
         </h2>
-        <p className="text-gray-400 mb-8">
+        <p className="text-gray-700 mb-8">
           Seret slider untuk melihat perbedaan Bumi dengan atau tanpa teknologi
           yang digunakan untuk melestarikan lingkungan.
         </p>
@@ -76,7 +76,7 @@ const Simulations = () => {
           }}
         />
 
-        <div className="flex justify-between mt-4 text-gray-400">
+        <div className="flex justify-between mt-4 text-gray-700">
           <span>🌍 Kerusakan Lingkungan</span>
           <span>🌍 Teknologi Melestarikan</span>
         </div>
@@ -110,4 +110,3 @@ const Simulations = () => {
 };
 
 export default Simulations;
-    
