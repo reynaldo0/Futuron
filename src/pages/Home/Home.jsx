@@ -1,9 +1,13 @@
 import React from 'react'
 import Hero from './Hero'
+import TechnologySolutions from './Solutions'
 
 const Home = () => {
   return (
-    <Hero/>
+    <div className="">
+        <Hero/>
+        <TechnologySolutions/>
+    </div>
   )
 }
 
