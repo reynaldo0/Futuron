@@ -11,9 +11,9 @@ const Simulations = () => {
 
   // Fungsi untuk menghasilkan warna gradien berdasarkan nilai slider
   const getSliderBackground = (value) => {
-    const green = Math.min(255, (value * 2.55)); // Semakin tinggi value, semakin hijau
-    const red = Math.min(255, ((100 - value) * 2.55)); // Semakin rendah value, semakin merah
-    return `linear-gradient(to right, rgb(${green}, 255, 100), rgb(255, ${red}, 100))`;
+    const red = Math.min(255, (value * 2.55)); // Semakin tinggi value, semakin merah
+    const green = Math.min(255, ((100 - value) * 2.55)); // Semakin rendah value, semakin hijau
+    return `linear-gradient(to left, rgb(${green}, 255, 100), rgb(255, ${red}, 100))`; // Membalikkan urutan gradien
   };
 
   return (
@@ -37,7 +37,7 @@ const Simulations = () => {
               backgroundImage: `url(/bumi/sehat.jpg)`, // Gambar bumi sehat
               backgroundSize: "cover",
               backgroundPosition: "center",
-              filter: "brightness(1.1)" // Meningkatkan kecerahan gambar
+              filter: "brightness(1.1)", // Meningkatkan kecerahan gambar
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,7 +52,7 @@ const Simulations = () => {
               backgroundImage: `url(/bumi/rusak.jpg)`, // Gambar bumi rusak
               backgroundSize: "cover",
               backgroundPosition: "center",
-              filter: "brightness(0.7)" // Membuat gambar lebih gelap untuk efek rusak
+              filter: "brightness(0.7)", // Membuat gambar lebih gelap untuk efek rusak
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -60,7 +60,7 @@ const Simulations = () => {
           />
 
           {/* Overlay efek transisi */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-400 to-red-500 opacity-20 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-500 to-green-400 opacity-20 pointer-events-none" />
         </div>
 
         {/* Slider Control */}
@@ -77,8 +77,8 @@ const Simulations = () => {
         />
 
         <div className="flex justify-between mt-4 text-gray-400">
-          <span>🌍 Teknologi Melestarikan</span>
           <span>🌍 Kerusakan Lingkungan</span>
+          <span>🌍 Teknologi Melestarikan</span>
         </div>
 
         {/* Informasi tambahan di bawah slider */}
@@ -110,3 +110,4 @@ const Simulations = () => {
 };
 
 export default Simulations;
+    
