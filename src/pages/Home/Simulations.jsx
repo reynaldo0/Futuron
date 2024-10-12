@@ -17,9 +17,9 @@ const Simulations = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gray-100">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8">
+        <h2 className="text-4xl font-bold text-primary-300 mb-8">
           Simulasi Masa Depan Bumi
         </h2>
         <p className="text-gray-700 mb-8">
@@ -60,7 +60,7 @@ const Simulations = () => {
           />
 
           {/* Overlay efek transisi */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-500 to-green-400 opacity-20 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-100 to-primary-200 opacity-20 pointer-events-none" />
         </div>
 
         {/* Slider Control */}
@@ -70,21 +70,21 @@ const Simulations = () => {
           max="100"
           value={sliderValue}
           onChange={handleSliderChange}
-          className="w-1/2 cursor-pointer appearance-none h-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition transform hover:scale-105"
+          className="w-1/2 cursor-pointer appearance-none h-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-200 transition transform hover:scale-105"
           style={{
             background: getSliderBackground(sliderValue),
           }}
         />
 
         <div className="flex justify-between mt-4 text-gray-700">
-          <span>🌍 Kerusakan Lingkungan</span>
-          <span>🌍 Teknologi Melestarikan</span>
+          <span className="text-secondary-300">🌍 Kerusakan Lingkungan</span>
+          <span className="text-primary-300">🌍 Teknologi Melestarikan</span>
         </div>
 
         {/* Informasi tambahan di bawah slider */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <h3 className="text-xl font-semibold text-green-300 mb-2">
+            <h3 className="text-xl font-semibold text-primary-100 mb-2">
               Bumi Lestari
             </h3>
             <p className="text-gray-300">
@@ -94,7 +94,7 @@ const Simulations = () => {
           </div>
 
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <h3 className="text-xl font-semibold text-red-400 mb-2">
+            <h3 className="text-xl font-semibold text-secondary-100 mb-2">
               Bumi Rusak
             </h3>
             <p className="text-gray-300">

@@ -34,7 +34,6 @@ const milestones = [
 ];
 
 const Roadmap = () => {
-  // Set default selected milestone to the first one
   const [selectedMilestoneIndex, setSelectedMilestoneIndex] = useState(0);
 
   const handleHover = (index) => {
@@ -42,7 +41,6 @@ const Roadmap = () => {
   };
 
   const handleNext = () => {
-    // Move to the next milestone
     setSelectedMilestoneIndex((prevIndex) =>
       prevIndex < milestones.length - 1 ? prevIndex + 1 : 0
     );
@@ -51,17 +49,19 @@ const Roadmap = () => {
   const selectedMilestone = milestones[selectedMilestoneIndex];
 
   return (
-    <section className="py-16 bg-gray-800 text-white">
+    <section className="py-16 bg-normal-100 text-normal-300">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">Langkah Teknologi Hijau</h2>
-        <p className="text-gray-300 mb-12">
+        <h2 className="text-4xl font-bold text-primary-300 mb-8">
+          Langkah Teknologi Hijau
+        </h2>
+        <p className="text-normal-200 mb-12">
           Jelajahi perjalanan teknologi hijau dari masa kini hingga masa depan dan lihat bagaimana teknologi dapat mengubah dunia.
         </p>
 
         {/* Roadmap */}
         <div className="relative flex items-center justify-center">
           {/* Roadmap Line */}
-          <div className="absolute w-full h-1 bg-gray-500 top-1/2 hidden md:block"></div>
+          <div className="absolute w-full h-1 bg-normal-200 top-1/2 hidden md:block"></div>
 
           {/* Milestones */}
           <div className="flex flex-col lg:flex-row justify-center w-full px-4">
@@ -78,15 +78,17 @@ const Roadmap = () => {
                 <div
                   className={`w-12 h-12 ${
                     index === selectedMilestoneIndex
-                      ? "bg-green-500 border-4 border-white"
-                      : "bg-green-400"
-                  } rounded-full flex items-center justify-center shadow-lg transform transition-transform`}
+                      ? "bg-primary-100 border-4 border-white"
+                      : "bg-primary-200"
+                  } rounded-full flex items-center justify-center shadow-md transform transition-transform`}
                 >
                   <span className="text-white font-bold">{milestone.year}</span>
                 </div>
 
                 {/* Title */}
-                <span className="text-lg mt-4 text-gray-300 px-10 md:px-0">{milestone.title}</span>
+                <span className="text-lg mt-4 text-normal-300 px-10 md:px-0">
+                  {milestone.title}
+                </span>
               </div>
             ))}
           </div>
@@ -94,9 +96,13 @@ const Roadmap = () => {
 
         {/* Selected Milestone Details */}
         {selectedMilestone && (
-          <div className="mt-12 bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col items-center">
-            <h3 className="text-3xl font-bold text-green-400 mb-4">{selectedMilestone.title}</h3>
-            <p className="text-lg text-gray-300 mb-4">{selectedMilestone.description}</p>
+          <div className="mt-12 bg-normal-200 p-8 rounded-lg shadow-lg flex flex-col items-center">
+            <h3 className="text-3xl font-bold text-primary-300 mb-4">
+              {selectedMilestone.title}
+            </h3>
+            <p className="text-lg text-normal-300 mb-4">
+              {selectedMilestone.description}
+            </p>
             <img
               src={selectedMilestone.image}
               alt={selectedMilestone.title}
@@ -106,7 +112,7 @@ const Roadmap = () => {
             {/* Next Button */}
             <button
               onClick={handleNext}
-              className="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition-all"
+              className="mt-4 bg-primary-100 hover:bg-primary-200 text-white font-bold py-2 px-6 rounded-full transition-all"
             >
               Next
             </button>
