@@ -1,8 +1,8 @@
 import React from 'react'
 import Hero from './Hero'
-import TechnologySolutions from './Solutions'
-import Simulations from './Simulations'
 import Roadmap from './RoadMap'
+import Simulations from './Simulations'
+import TechnologySolutions from './Solutions'
 
 const Home = () => {
   return (

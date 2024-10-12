@@ -85,12 +85,12 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#dokumentasi"
-                  className="block rounded rounded-l-full rounded-r-full bg-primary-100 px-5 py-2 text-white transition-colors hover:bg-primary-200"
+                <Link
+                  to="/quiz"
+                  className="block rounded rounded-l-full rounded-r-full bg-green-700 px-5 py-2 text-white transition-colors hover:bg-green-600"
                 >
-                  Dokumentasi
-                </a>
+                  Quiz
+                </Link>
               </li>
             </ul>
           </div>
