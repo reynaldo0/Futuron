@@ -3,6 +3,7 @@ import Hero from './Hero'
 import Roadmap from './RoadMap'
 import Simulations from './Simulations'
 import TechnologySolutions from './Solutions'
+import TreeProfile from './Adoption'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         <TechnologySolutions/>
         <Simulations/>
         <Roadmap/>
+        <TreeProfile/>
     </div>
   )
 }

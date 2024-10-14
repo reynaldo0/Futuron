@@ -4,31 +4,36 @@ const milestones = [
   {
     year: 2022,
     title: "Penerapan Drone Reboisasi",
-    description: "Teknologi drone digunakan untuk menanam pohon otomatis di area yang terdampak deforestasi.",
+    description:
+      "Teknologi drone digunakan untuk menanam pohon otomatis di area yang terdampak deforestasi.",
     image: "/roadmap/drone.webp",
   },
   {
     year: 2025,
     title: "50% Energi Global dari Sumber Terbarukan",
-    description: "Setengah dari energi global dipasok oleh sumber energi terbarukan, mengurangi ketergantungan pada bahan bakar fosil.",
+    description:
+      "Setengah dari energi global dipasok oleh sumber energi terbarukan, mengurangi ketergantungan pada bahan bakar fosil.",
     image: "/roadmap/turbin.jpg",
   },
   {
     year: 2030,
     title: "Mobil Listrik Menguasai Pasar",
-    description: "Penerimaan mobil listrik yang masif di seluruh dunia, mengurangi emisi karbon secara signifikan.",
+    description:
+      "Penerimaan mobil listrik yang masif di seluruh dunia, mengurangi emisi karbon secara signifikan.",
     image: "/roadmap/mobil.webp",
   },
   {
     year: 2035,
     title: "Penghentian Total Penggunaan Plastik Sekali Pakai",
-    description: "Pencapaian penghentian penggunaan plastik sekali pakai di seluruh dunia, menggantinya dengan bahan ramah lingkungan.",
+    description:
+      "Pencapaian penghentian penggunaan plastik sekali pakai di seluruh dunia, menggantinya dengan bahan ramah lingkungan.",
     image: "/roadmap/plastik.jpg",
   },
   {
     year: 2040,
     title: "Hutan Buatan untuk Mengatasi Deforestasi",
-    description: "Penerapan hutan buatan skala besar untuk membantu pemulihan ekosistem yang rusak.",
+    description:
+      "Penerapan hutan buatan skala besar untuk membantu pemulihan ekosistem yang rusak.",
     image: "/roadmap/hutan.jpg",
   },
 ];
@@ -55,21 +60,25 @@ const Roadmap = () => {
           Langkah Teknologi Hijau
         </h2>
         <p className="text-normal-200 mb-12">
-          Jelajahi perjalanan teknologi hijau dari masa kini hingga masa depan dan lihat bagaimana teknologi dapat mengubah dunia.
+          Jelajahi perjalanan teknologi hijau dari masa kini hingga masa depan
+          dan lihat bagaimana teknologi dapat mengubah dunia.
         </p>
 
         {/* Roadmap */}
-        <div className="relative flex items-center justify-center">
-          {/* Roadmap Line */}
-          <div className="absolute w-full h-1 bg-normal-200 top-1/2 hidden md:block"></div>
+        <div className="relative flex flex-col lg:flex-row items-center justify-center">
+          {/* Roadmap Line for Mobile */}
+          <div className="absolute h-full w-1 bg-normal-200 top-0 left-1/2 transform -translate-x-1/2 lg:hidden"></div>
+
+          {/* Roadmap Line for Desktop */}
+          <div className="absolute w-full h-1 bg-normal-200 top-1/2 hidden lg:block"></div>
 
           {/* Milestones */}
-          <div className="flex flex-col lg:flex-row justify-center w-full px-4">
+          <div className="flex lg:flex-row flex-col justify-center w-full px-4">
             {milestones.map((milestone, index) => (
               <div
                 key={index}
                 className={`relative flex flex-col items-center cursor-pointer group mb-8 lg:mb-0 lg:mx-4 ${
-                  index === selectedMilestoneIndex ? "md:scale-125" : ""
+                  index === selectedMilestoneIndex ? "scale-110" : ""
                 }`}
                 onMouseEnter={() => handleHover(index)}
                 onClick={() => handleHover(index)}
@@ -85,8 +94,13 @@ const Roadmap = () => {
                   <span className="text-white font-bold">{milestone.year}</span>
                 </div>
 
+                {/* Line Connector for Mobile */}
+                {index < milestones.length - 1 && (
+                  <div className="w-1 h-16 bg-normal-200 lg:hidden"></div>
+                )}
+
                 {/* Title */}
-                <span className="text-lg mt-4 text-normal-300 px-10 md:px-0">
+                <span className="text-lg mt-4 text-normal-300 px-4 lg:px-0">
                   {milestone.title}
                 </span>
               </div>
@@ -106,7 +120,7 @@ const Roadmap = () => {
             <img
               src={selectedMilestone.image}
               alt={selectedMilestone.title}
-              className="w-full h-full object-cover rounded-lg mb-4"
+              className="w-full h-full md:h-96 object-cover rounded-lg mb-4"
             />
 
             {/* Next Button */}
