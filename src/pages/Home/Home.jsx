@@ -4,6 +4,7 @@ import Roadmap from './RoadMap'
 import Simulations from './Simulations'
 import TechnologySolutions from './Solutions'
 import TreeProfile from './Adoption'
+import TreeCanvas from '../../components/Models/Canvas'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <Simulations/>
         <Roadmap/>
         <TreeProfile/>
+        <TreeCanvas/>
     </div>
   )
 }
