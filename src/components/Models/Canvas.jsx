@@ -77,11 +77,17 @@ function TreeCanvas() {
             <TreeModel
               type={selectedElement}
               position={[0, 0, 0]}
+              enableZoom={false}
               meshRef={elementRef}
             />
 
             {/* User interaction controls */}
-            <OrbitControls enableZoom={true} />
+            <OrbitControls 
+            enableZoom={false} // Disable zoom
+            maxAzimuthAngle={Math.PI / 4} // Limit horizontal panning to 45 degrees
+            minAzimuthAngle={-Math.PI / 4} // Limit horizontal panning to -45 degrees
+            maxPolarAngle={Math.PI / 2} 
+            minPolarAngle={Math.PI / 2} />
 
             {/* Background stars */}
             <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade={true} />
