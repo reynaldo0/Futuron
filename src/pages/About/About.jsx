@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Hero from './Hero';
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,23 +25,7 @@ const About = () => {
   return (
     <div className="bg-gray-50 text-gray-900 min-h-screen">
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-green-500 to-green-900 h-[80vh] flex items-center justify-center text-white">
-        <div className="text-center px-6">
-          <h1 className="text-5xl font-extrabold tracking-tight md:text-6xl">
-            Menghubungkan Teknologi dan Alam
-          </h1>
-          <p className="mt-4 text-lg md:text-2xl">
-            Misi kami adalah memanfaatkan inovasi terkini untuk melestarikan, melindungi, dan memulihkan lingkungan.
-          </p>
-          <a
-            href="#about-section"
-            className="mt-8 inline-block px-6 py-3 bg-white text-green-900 font-semibold text-lg rounded-lg hover:bg-gray-200 transition-all"
-          >
-            Pelajari Lebih Lanjut
-          </a>
-        </div>
-      </section>
+      <Hero/>
 
       {/* About Section */}
       <section id="about-section" className="py-16 px-6 md:px-20">

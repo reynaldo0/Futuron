@@ -3,7 +3,6 @@ import Hero from './Hero'
 import Roadmap from './RoadMap'
 import Simulations from './Simulations'
 import TechnologySolutions from './Solutions'
-import TreeProfile from './Adoption'
 import TreeCanvas from '../../components/Models/Canvas'
 import ImpactFeed from './ImpactFeed'
 
@@ -14,7 +13,6 @@ const Home = () => {
         <TechnologySolutions/>
         <Simulations/>
         <Roadmap/>
-        <TreeProfile/>
         <TreeCanvas/>
         <ImpactFeed/>
     </div>
