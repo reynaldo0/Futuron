@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import CountUp from 'react-countup'; // Import CountUp
+import StatCard from '../../components/StatCard';
 
 // Ikon untuk marker peta
 delete L.Icon.Default.prototype._getIconUrl;
@@ -77,15 +79,15 @@ const mockData = [
     lat: -8.6574, // Lintang NTT (Kupang)
     lng: 121.0794, // Bujur NTT
   },
+  {
+    id: 9,
+    lokasi: "Reboisasi di Sumatra Barat (Lombok)",
+    pohonDitanam: 45000,
+    karbonDiOffset: 900,
+    lat: -0.9634, // Lintang Sumatra Barat (Padang)
+    lng: 100.3600, // Bujur Sumatra Barat (Padang)
+  },
 ];
-
-// Komponen Kartu Statistik
-const StatCard = ({ title, value }) => (
-  <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-    <h3 className="text-xl font-semibold text-gray-700">{title}</h3>
-    <p className="text-3xl font-bold text-green-600">{value}</p>
-  </div>
-);
 
 // Komponen Kartu Proyek untuk Feed Langsung
 const ProjectCard = ({ project }) => (
@@ -112,8 +114,9 @@ const ImpactFeed = () => {
 
       {/* Bagian Statistik */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        <StatCard title="Total Karbon Di-offset" value="12,900 ton" />
-        <StatCard title="Total Pohon Ditanam" value="460,000+" />
+        {/* Gunakan CountUp di sini */}
+        <StatCard title="Total Karbon Di-offset" value={13800} />
+        <StatCard title="Total Pohon Ditanam" value={500000} />
         <StatCard title="Proyek Aktif" value={feedData.length} />
       </div>
 
