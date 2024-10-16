@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import CountUp from "react-countup"; // Import CountUp
 import StatCard from "../../components/StatCard";
 import { mockData } from "../../docs/ImpactFeedData";
-
-// Ikon untuk marker peta
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
-  iconUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
-});
+import MapView from "../../components/MapView";
 
 // Komponen Kartu Proyek untuk Feed Langsung
 const ProjectCard = ({ project }) => (
@@ -52,7 +39,6 @@ const ImpactFeed = () => {
 
       {/* Bagian Statistik */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-        {/* Gunakan CountUp di sini */}
         <StatCard title="Total Karbon Di-offset" value={13800} />
         <StatCard title="Total Pohon Ditanam" value={500000} />
         <StatCard title="Proyek Aktif" value={filteredProjects.length} />
@@ -70,23 +56,7 @@ const ImpactFeed = () => {
         <h2 className="text-2xl font-semibold text-green-700 mb-5">
           Lokasi Proyek di Indonesia
         </h2>
-        <MapContainer
-          center={[-2.5489, 118.0149]}
-          zoom={5}
-          className="w-full h-96"
-          attributionControl={false}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          {filteredProjects.map((project) => (
-            <Marker key={project.id} position={[project.lat, project.lng]}>
-              <Popup>
-                <strong>{project.lokasi}</strong>
-                <p>Pohon Ditanam: {project.pohonDitanam.toLocaleString()}</p>
-                <p>Karbon yang Di-offset: {project.karbonDiOffset} ton</p>
-              </Popup>
-            </Marker>
-          ))}
-        </MapContainer>
+        <MapView filteredProjects={filteredProjects} />
       </div>
     </div>
   );
