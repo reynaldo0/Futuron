@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import SimulationsData from "../../docs/Simulations.jsx";
 
 const Simulations = () => {
-  const [sliderValue, setSliderValue] = useState(50); // Nilai slider dimulai di tengah
-
-  // Fungsi untuk menangani perubahan slider
+  const [sliderValue, setSliderValue] = useState(50); 
+  
   const handleSliderChange = (e) => {
     setSliderValue(e.target.value);
   };
@@ -19,12 +19,12 @@ const Simulations = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto text-center">
+        {/* Title and Subtitle */}
         <h2 className="text-4xl font-bold text-primary-300 mb-8">
-          Simulasi Masa Depan Bumi
+          {SimulationsData.simulationDescription.title}
         </h2>
         <p className="text-gray-700 mb-8">
-          Seret slider untuk melihat perbedaan Bumi dengan atau tanpa teknologi
-          yang digunakan untuk melestarikan lingkungan.
+          {SimulationsData.simulationDescription.subtitle}
         </p>
 
         {/* Simulasi Bumi */}
@@ -34,7 +34,7 @@ const Simulations = () => {
             className="absolute top-0 left-0 w-full h-full"
             style={{
               clipPath: `inset(0 ${100 - sliderValue}% 0 0)`, // Mengubah area yang terpotong berdasarkan nilai slider
-              backgroundImage: `url(/bumi/sehat.jpg)`, // Gambar bumi sehat
+              backgroundImage: `url(${SimulationsData.earthImages.healthy})`, // Gambar bumi sehat
               backgroundSize: "cover",
               backgroundPosition: "center",
               filter: "brightness(1.1)", // Meningkatkan kecerahan gambar
@@ -49,7 +49,7 @@ const Simulations = () => {
             className="absolute top-0 right-0 w-full h-full"
             style={{
               clipPath: `inset(0 0 0 ${sliderValue}%)`, // Memotong gambar bumi rusak sesuai nilai slider
-              backgroundImage: `url(/bumi/rusak.jpg)`, // Gambar bumi rusak
+              backgroundImage: `url(${SimulationsData.earthImages.damaged})`, // Gambar bumi rusak
               backgroundSize: "cover",
               backgroundPosition: "center",
               filter: "brightness(0.7)", // Membuat gambar lebih gelap untuk efek rusak
@@ -77,37 +77,30 @@ const Simulations = () => {
         />
 
         <div className="flex justify-between mt-4 text-gray-700">
-          <span className="text-secondary-300">🌍 Kerusakan Lingkungan</span>
-          <span className="text-primary-300">🌍 Teknologi Melestarikan</span>
+          <span className="text-secondary-300">{SimulationsData.sliderLabels.damage}</span>
+          <span className="text-primary-300">{SimulationsData.sliderLabels.technology}</span>
         </div>
 
         {/* Informasi tambahan di bawah slider */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div className="bg-white text-gray-900 border-2 border-y-red-400 p-6 rounded-lg shadow-lg relative overflow-hidden group">
-            <h3 className="text-xl font-bold text-red-700 group-hover:text-white mb-2 relative z-10">
-              Bumi Rusak
-            </h3>
-            <p className="text-gray-700 group-hover:text-white relative z-10">
-              Teknologi tidak digunakan dengan bijak, menyebabkan hutan rusak,
-              kualitas udara menurun, suhu global naik, dan populasi satwa liar
-              berkurang drastis.
-            </p>
+          {SimulationsData.cards.map((card, index) => (
+            <div
+              key={index}
+              className={`bg-white text-gray-900 border-2 ${card.borderColor} p-6 rounded-lg shadow-lg relative overflow-hidden group`}
+            >
+              <h3 className="text-xl font-bold text-red-700 group-hover:text-white mb-2 relative z-10">
+                {card.title}
+              </h3>
+              <p className="text-gray-700 group-hover:text-white relative z-10">
+                {card.description}
+              </p>
 
-            {/* Hover Background Animation */}
-            <div className="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0" />
-          </div>
-          <div className="bg-white text-gray-900 border-2 border-y-primary-300 p-6 rounded-lg shadow-lg relative overflow-hidden group">
-            <h3 className="text-xl font-bold text-primary-300 group-hover:text-white mb-2 relative z-10">
-              Bumi Lestari
-            </h3>
-            <p className="text-gray-700 group-hover:text-white relative z-10">
-              Teknologi digunakan untuk melestarikan hutan, menjaga kualitas
-              udara, mengurangi suhu global, dan melindungi populasi satwa liar.
-            </p>
-
-            {/* Hover Background Animation */}
-            <div className="absolute inset-0 bg-primary-300 transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0" />
-          </div>
+              {/* Hover Background Animation */}
+              <div
+                className={`absolute inset-0 ${card.hoverColor} transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
