@@ -118,7 +118,7 @@ const ImpactFeed = () => {
       </div>
 
       {/* Feed Langsung */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
         {feedData.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

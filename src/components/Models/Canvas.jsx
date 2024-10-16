@@ -39,11 +39,11 @@ function TreeCanvas() {
   };
 
   return (
-    <div className="relative w-full h-screen flex justify-center items-center">
-      <h1 className="absolute top-5 text-4xl font-bold text-center text-primary-400 z-10">
+    <div className="relative w-full container mx-auto h-screen flex justify-center items-center">
+      <h1 className="absolute top-5 text-4xl mx-5 md:mx-0 font-bold text-center text-primary-400 z-10">
         Bring Nature to Your Space
       </h1>
-      <div className="relative bg-white w-[50%] h-[80%] rounded-lg shadow-xl overflow-hidden">
+      <div className="relative bg-white w-[80%] h-[50%] md:w-[50%] md:h-[70%] rounded-lg shadow-xl overflow-hidden">
         {/* 3D Canvas Container */}
         <div className="w-full h-full">
           <Canvas
@@ -100,7 +100,7 @@ function TreeCanvas() {
       </div>
 
       {/* Controls for selecting nature elements */}
-      <div className="absolute bottom-0 flex justify-center space-x-4 z-[999999]">
+      <div className="absolute bottom-20 md:bottom-0 flex justify-center space-x-4 z-[999999]">
         <button
           onClick={() => handleSelectElement("tree")}
           className="bg-primary-300 hover:bg-primary-400 text-white px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
