@@ -105,7 +105,7 @@ const ImpactFeed = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-5">
+    <div className="min-h-screen container mx-auto p-5">
       <h1 className="text-4xl font-bold text-center text-green-600 mb-10">
         Feed Dampak Lingkungan Langsung - Indonesia 🌍
       </h1>

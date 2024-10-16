@@ -17,7 +17,7 @@ const Simulations = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-primary-300 mb-8">
           Simulasi Masa Depan Bumi
@@ -83,21 +83,21 @@ const Simulations = () => {
 
         {/* Informasi tambahan di bawah slider */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <h3 className="text-xl font-semibold text-primary-100 mb-2">
+          <div className="bg-white text-gray-900 p-6 rounded-lg shadow-lg hover:bg-primary-200 transition group">
+            <h3 className="text-xl font-bold text-primary-300 group-hover:text-white mb-2">
               Bumi Lestari
             </h3>
-            <p className="text-gray-300">
+            <p className="text-gray-700 group-hover:text-white">
               Teknologi digunakan untuk melestarikan hutan, menjaga kualitas
               udara, mengurangi suhu global, dan melindungi populasi satwa liar.
             </p>
           </div>
 
-          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-            <h3 className="text-xl font-semibold text-secondary-100 mb-2">
+          <div className="bg-white text-gray-900 p-6 rounded-lg shadow-lg hover:bg-primary-200 transition group">
+            <h3 className="text-xl font-bold text-red-700 mb-2 group-hover:text-white">
               Bumi Rusak
             </h3>
-            <p className="text-gray-300">
+            <p className="text-gray-700 group-hover:text-white">
               Teknologi tidak digunakan dengan bijak, menyebabkan hutan rusak,
               kualitas udara menurun, suhu global naik, dan populasi satwa liar
               berkurang drastis.

@@ -85,10 +85,10 @@ const Roadmap = () => {
               >
                 {/* Milestone Circle */}
                 <div
-                  className={`w-12 h-12 ${
+                  className={`w-14 h-14 ${
                     index === selectedMilestoneIndex
-                      ? "bg-primary-100 border-4 border-white"
-                      : "bg-primary-200"
+                      ? "bg-primary-300 border-2 border-gray-600"
+                      : "bg-primary-200 border-2 border-gray-400"
                   } rounded-full flex items-center justify-center shadow-md transform transition-transform`}
                 >
                   <span className="text-white font-bold">{milestone.year}</span>
@@ -126,7 +126,7 @@ const Roadmap = () => {
             {/* Next Button */}
             <button
               onClick={handleNext}
-              className="mt-4 bg-primary-100 hover:bg-primary-200 text-white font-bold py-2 px-6 rounded-full transition-all"
+              className="mt-4 bg-primary-300 hover:bg-primary-400 text-white font-bold py-2 px-14 rounded-full transition-all"
             >
               Next
             </button>
