@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import SimulationsData from "../../docs/Simulations.jsx";
+import SimulationsData from "../../docs/SimulationsData.jsx";
 
 const Simulations = () => {
   const [sliderValue, setSliderValue] = useState(50); 
