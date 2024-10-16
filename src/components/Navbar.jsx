@@ -18,8 +18,8 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="fixed left-0 top-0 z-[99999] w-full border-gray-200 bg-white/70 backdrop-blur-md">
-        <div className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
+      <nav className="fixed left-0 top-0 z-[99999] md:px-10 w-full border-gray-200 bg-white/70 backdrop-blur-md">
+        <div className="container mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
           <a
             href="#"
             className="flex items-center space-x-3 rtl:space-x-reverse"
