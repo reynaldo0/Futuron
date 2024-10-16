@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Environment from "./pages/Enviroment/Environment";
 import Quiz from "./pages/Quiz";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/environment" element={<Environment />} />
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

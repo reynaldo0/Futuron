@@ -83,20 +83,7 @@ const Simulations = () => {
 
         {/* Informasi tambahan di bawah slider */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div className="bg-white text-gray-900 border-2 border-y-primary-300 p-6 rounded-lg shadow-lg relative overflow-hidden group">
-            <h3 className="text-xl font-bold text-primary-300 group-hover:text-white mb-2 relative z-10">
-              Bumi Lestari
-            </h3>
-            <p className="text-gray-700 group-hover:text-white relative z-10">
-              Teknologi digunakan untuk melestarikan hutan, menjaga kualitas
-              udara, mengurangi suhu global, dan melindungi populasi satwa liar.
-            </p>
-
-            {/* Hover Background Animation */}
-            <div className="absolute inset-0 bg-primary-300 transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0" />
-          </div>
-
-          <div className="bg-white text-gray-900 border-2 border-red-400 p-6 rounded-lg shadow-lg relative overflow-hidden group">
+          <div className="bg-white text-gray-900 border-2 border-y-red-400 p-6 rounded-lg shadow-lg relative overflow-hidden group">
             <h3 className="text-xl font-bold text-red-700 group-hover:text-white mb-2 relative z-10">
               Bumi Rusak
             </h3>
@@ -108,6 +95,18 @@ const Simulations = () => {
 
             {/* Hover Background Animation */}
             <div className="absolute inset-0 bg-red-700 transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0" />
+          </div>
+          <div className="bg-white text-gray-900 border-2 border-y-primary-300 p-6 rounded-lg shadow-lg relative overflow-hidden group">
+            <h3 className="text-xl font-bold text-primary-300 group-hover:text-white mb-2 relative z-10">
+              Bumi Lestari
+            </h3>
+            <p className="text-gray-700 group-hover:text-white relative z-10">
+              Teknologi digunakan untuk melestarikan hutan, menjaga kualitas
+              udara, mengurangi suhu global, dan melindungi populasi satwa liar.
+            </p>
+
+            {/* Hover Background Animation */}
+            <div className="absolute inset-0 bg-primary-300 transform scale-y-0 group-hover:scale-y-100 transition-all duration-500 ease-in-out origin-center z-0" />
           </div>
         </div>
       </div>
