@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Hero from './Hero';
+import Mission from './Mission';
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,8 @@ const About = () => {
     <div className="bg-gray-50 text-gray-900 min-h-screen">
 
       <Hero/>
+
+      <Mission/>
 
       {/* About Section */}
       <section id="about-section" className="py-16 px-6 md:px-20">
