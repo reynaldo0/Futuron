@@ -30,35 +30,7 @@ const About = () => {
 
       <Mission/>
 
-      {/* About Section */}
-      <section id="about-section" className="py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900">Misi Kami</h2>
-        <p className="mt-6 text-lg leading-relaxed text-gray-700 text-center">
-          Di Sustainability 2.0, kami percaya pada masa depan di mana teknologi dan alam hidup berdampingan secara harmonis. Misi kami adalah memanfaatkan inovasi terkini untuk melestarikan, melindungi, dan memulihkan lingkungan.
-        </p>
-      </section>
-
-      {/* Accordion Section - Our Approach */}
-      <section className="py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900">Pendekatan Kami</h2>
-        <p className="mt-6 text-lg text-center text-gray-800">Inovasi, Edukasi, dan Aksi</p>
-
-        <div className="mt-12">
-          {/* Accordion Items */}
-          <AccordionItem
-            title="Inovasi"
-            content="Kami menjelajahi perkembangan terbaru dalam teknologi ramah lingkungan, mulai dari inovasi energi surya hingga kota pintar dan bahan ramah lingkungan. Tim kami berdedikasi untuk menemukan solusi berkelanjutan yang bermanfaat bagi masyarakat dan planet ini."
-          />
-          <AccordionItem
-            title="Edukasi"
-            content="Kami percaya bahwa kesadaran adalah langkah pertama menuju perubahan. Melalui alat interaktif, konten yang mendalam, dan contoh nyata, kami mengedukasi individu dan bisnis tentang manfaat mengadopsi teknologi berkelanjutan."
-          />
-          <AccordionItem
-            title="Aksi"
-            content="Perubahan dimulai dengan aksi. Melalui proyek dan inisiatif kami, kami bekerja dengan komunitas, organisasi, dan inovator untuk menerapkan solusi nyata yang mengurangi dampak lingkungan."
-          />
-        </div>
-      </section>
+      
 
       {/* Accordion Section - What We Do */}
       <section className="bg-gray-100 py-16 px-6 md:px-20">

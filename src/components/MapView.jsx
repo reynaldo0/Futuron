@@ -15,10 +15,19 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapView = ({ filteredProjects }) => {
+  // Batas koordinat Indonesia untuk maxBounds
+  const bounds = [
+    [-10.0, 95.0],  // koordinat barat daya
+    [5.5, 141.0],   // koordinat timur laut
+  ];
+
   return (
     <MapContainer
-      center={[-2.5489, 118.0149]}
+      center={[-2.5489, 118.0149]} // Pusat di Indonesia
       zoom={5}
+      minZoom={4} // Zoom minimal
+      maxZoom={10} // Zoom maksimal
+      maxBounds={bounds} // Batasi peta pada area Indonesia
       className="w-full h-96"
       attributionControl={false}
     >
