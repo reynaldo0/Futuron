@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Hero from './Hero';
 import Mission from './Mission';
 import ApproachSection from './Approuch';
+import Values from './Values';
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,26 +34,7 @@ const About = () => {
 
       <ApproachSection/>
 
-      {/* Accordion Section - What We Do */}
-      <section className="bg-gray-100 py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-bold text-center text-gray-900">Apa yang Kami Lakukan</h2>
-
-        <div className="mt-12">
-          {/* Accordion Items */}
-          <AccordionItem
-            title="Energi Terbarukan"
-            content="Kami mempromosikan dan mendukung adopsi teknologi energi terbarukan, seperti energi surya, angin, dan energi pasang surut, yang menyediakan energi bersih dan berkelanjutan untuk komunitas di seluruh dunia."
-          />
-          <AccordionItem
-            title="Kota Pintar & Desain Berkelanjutan"
-            content="Urbanisasi semakin meningkat, dan dengan itu datanglah kebutuhan akan kota yang efisien, hijau, dan berkelanjutan. Kami mempromosikan konsep kota pintar—ruang urban yang dirancang dengan infrastruktur berkelanjutan, bangunan hemat energi, dan transportasi ramah lingkungan."
-          />
-          <AccordionItem
-            title="Restorasi Lingkungan"
-            content="Dengan menggunakan teknologi, kami mendukung upaya untuk memulihkan ekosistem yang rusak. Mulai dari proyek reforestasi menggunakan drone hingga sistem pemantauan lingkungan berbasis AI, kami menunjukkan bagaimana teknologi dapat membawa keseimbangan kembali ke alam."
-          />
-        </div>
-      </section>
+      <Values/>
 
       {/* Vision Section */}
       <section className="py-16 px-6 md:px-20 text-center bg-gradient-to-b from-green-600 to-green-900">
