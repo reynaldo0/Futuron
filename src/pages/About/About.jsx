@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Hero from './Hero';
 import Mission from './Mission';
+import ApproachSection from './Approuch';
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const About = () => {
 
       <Mission/>
 
-      
+      <ApproachSection/>
 
       {/* Accordion Section - What We Do */}
       <section className="bg-gray-100 py-16 px-6 md:px-20">
