@@ -29,23 +29,10 @@ const About = () => {
     <div className="bg-gray-50 text-gray-900 min-h-screen">
 
       <Hero/>
-
       <Mission/>
-
       <ApproachSection/>
-
       <Values/>
 
-      {/* Vision Section */}
-      <section className="py-16 px-6 md:px-20 text-center bg-gradient-to-b from-green-600 to-green-900">
-        <h2 className="text-4xl font-bold text-white">Visi Kami untuk Masa Depan</h2>
-        <p className="mt-6 text-lg text-white leading-relaxed">
-          Kami membayangkan masa depan di mana kota-kota bernapas, hutan berkembang, dan umat manusia berkembang harmonis dengan alam. Dengan Sustainability 2.0, kami dapat mengurangi jejak karbon, menciptakan lapangan pekerjaan hijau, dan membangun gerakan global menuju tanggung jawab lingkungan.
-        </p>
-        <p className="mt-4 text-lg text-white leading-relaxed">
-          Bersama-sama, kita dapat membangun masa depan di mana kemajuan teknologi berjalan seiring dengan pelestarian ekologi.
-        </p>
-      </section>
     </div>
   );
 };
