@@ -18,7 +18,11 @@ L.Icon.Default.mergeOptions({
 const MapView = ({ filteredProjects, selectedProject }) => {
   return (
     <MapContainer
-      center={selectedProject ? [selectedProject.lat, selectedProject.lng] : [-2.5489, 118.0149]}
+      center={
+        selectedProject
+          ? [selectedProject.lat, selectedProject.lng]
+          : [-2.5489, 118.0149]
+      }
       zoom={selectedProject ? 8 : 5}
       className="w-full h-96"
       attributionControl={false}
@@ -37,20 +41,24 @@ const MapView = ({ filteredProjects, selectedProject }) => {
         <Marker position={[selectedProject.lat, selectedProject.lng]}>
           <Popup>
             <strong>{selectedProject.lokasi}</strong>
-            <p>Pohon Ditanam: {selectedProject.pohonDitanam.toLocaleString()}</p>
+            <p>
+              Pohon Ditanam: {selectedProject.pohonDitanam.toLocaleString()}
+            </p>
             <p>Karbon yang Di-offset: {selectedProject.karbonDiOffset} ton</p>
           </Popup>
         </Marker>
       )}
 
       {/* Popup di sebelah kiri atas */}
-      <div className="absolute top-4 left-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] animate-blink hover:animate-none">
-  <p>Apakah anda ingin melihat data lainnya?</p>
-  <Link to="/data" className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-400">
-    <p className="text-white">Lihat Data</p>
-  </Link>
-</div>
-
+      <div className="absolute top-4 right-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] animate-shake hover:animate-none">
+        <p>Apakah anda ingin melihat data lainnya?</p>
+        <Link
+          to="/data"
+          className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-400"
+        >
+          <p className="text-white">Lihat Data</p>
+        </Link>
+      </div>
     </MapContainer>
   );
 };

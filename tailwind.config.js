@@ -11,6 +11,17 @@ export default {
           400 : "#1A5319",
         }
       },
+      animation: {
+        'shake': 'shake 1s ease-in-out infinite',
+      },
+      keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-10px)' },
+          '50%': { transform: 'translateX(10px)' },
+          '75%': { transform: 'translateX(-10px)' },
+        },
+      },
     },
   },
   plugins: [],
