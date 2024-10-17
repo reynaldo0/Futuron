@@ -14,20 +14,11 @@ L.Icon.Default.mergeOptions({
     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
-const MapView = ({ filteredProjects }) => {
-  // Batas koordinat Indonesia untuk maxBounds
-  const bounds = [
-    [-10.0, 95.0],  // koordinat barat daya
-    [5.5, 141.0],   // koordinat timur laut
-  ];
-
+const MapView = ({ filteredProjects, selectedProject }) => {
   return (
     <MapContainer
-      center={[-2.5489, 118.0149]} // Pusat di Indonesia
-      zoom={5}
-      minZoom={4} // Zoom minimal
-      maxZoom={10} // Zoom maksimal
-      maxBounds={bounds} // Batasi peta pada area Indonesia
+      center={selectedProject ? [selectedProject.lat, selectedProject.lng] : [-2.5489, 118.0149]}
+      zoom={selectedProject ? 8 : 5}
       className="w-full h-96"
       attributionControl={false}
     >
@@ -41,6 +32,15 @@ const MapView = ({ filteredProjects }) => {
           </Popup>
         </Marker>
       ))}
+      {selectedProject && (
+        <Marker position={[selectedProject.lat, selectedProject.lng]}>
+          <Popup>
+            <strong>{selectedProject.lokasi}</strong>
+            <p>Pohon Ditanam: {selectedProject.pohonDitanam.toLocaleString()}</p>
+            <p>Karbon yang Di-offset: {selectedProject.karbonDiOffset} ton</p>
+          </Popup>
+        </Marker>
+      )}
     </MapContainer>
   );
 };
