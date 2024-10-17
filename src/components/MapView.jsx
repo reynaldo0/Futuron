@@ -2,6 +2,7 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 // Ikon untuk marker peta
 delete L.Icon.Default.prototype._getIconUrl;
@@ -41,6 +42,15 @@ const MapView = ({ filteredProjects, selectedProject }) => {
           </Popup>
         </Marker>
       )}
+
+      {/* Popup di sebelah kiri atas */}
+      <div className="absolute top-4 left-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] animate-blink hover:animate-none">
+  <p>Apakah anda ingin melihat data lainnya?</p>
+  <Link to="/data" className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-400">
+    <p className="text-white">Lihat Data</p>
+  </Link>
+</div>
+
     </MapContainer>
   );
 };
