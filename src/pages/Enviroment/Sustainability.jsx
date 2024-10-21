@@ -46,9 +46,9 @@ const SustainabilityVisualization = () => {
         className="w-full"
         draggable="false"
       />
-      <div className="bg-primary-300 relative">
+      <div className="bg-primary-200 relative">
         {/* Hero Section */}
-        <div className="bg-primary-300 text-white pb-16 text-center">
+        <div className="text-white pb-16 text-center">
           <h1 className="text-4xl font-bold mb-4">
             Visualisasi Data Interaktif tentang Keberlanjutan
           </h1>

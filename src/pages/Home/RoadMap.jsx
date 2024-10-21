@@ -92,7 +92,7 @@ const Roadmap = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="mt-12 bg-primary-200/30 p-8 rounded-lg shadow-lg flex flex-col items-center"
+              className="mt-12 bg-primary-300/30 p-8 rounded-lg shadow-lg flex flex-col items-center"
             >
               <h3 className="text-3xl font-bold text-primary-300 mb-4">
                 {selectedMilestone.title}

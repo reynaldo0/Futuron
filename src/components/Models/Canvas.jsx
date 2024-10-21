@@ -44,12 +44,12 @@ function TreeCanvas() {
         Bring Nature to Your Space
       </h1>
       
-      <div className="relative bg-primary-400/30 w-[80%] h-[50%] md:w-[50%] md:h-[70%] rounded-full shadow-xl overflow-hidden">
+      <div className="relative bg-primary-200/40 w-[80%] h-[50%] md:w-[50%] md:h-[70%] rounded-full shadow-xl overflow-hidden">
         {/* 3D Canvas Container */}
         <div className="w-full h-full">
           <Canvas
             camera={{ position: [0, 2, 5], fov: 30 }}
-            className="w-full h-full"
+            className="w-full h-full z-[99]"
           >
             {/* Lighting Setup */}
             <ambientLight intensity={0.3} />{" "}
