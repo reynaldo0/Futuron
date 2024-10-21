@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
     scroll-behavior: smooth;
+}
+
+.progress-bar {
+    transition: width 1s ease-in-out;
 }

@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
 // Mendaftarkan elemen chart.js yang diperlukan
 ChartJS.register(
@@ -44,8 +53,14 @@ const VerticalFarming = () => {
       // Update data historis untuk grafik (menambahkan nilai terbaru dan menghapus yang lama)
       setHistoricalData((prevData) => ({
         moistureHistory: [...prevData.moistureHistory.slice(1), newMoisture],
-        temperatureHistory: [...prevData.temperatureHistory.slice(1), newTemperature],
-        soilQualityHistory: [...prevData.soilQualityHistory.slice(1), newSoilQuality],
+        temperatureHistory: [
+          ...prevData.temperatureHistory.slice(1),
+          newTemperature,
+        ],
+        soilQualityHistory: [
+          ...prevData.soilQualityHistory.slice(1),
+          newSoilQuality,
+        ],
       }));
     }, 5000); // Data diupdate setiap 5 detik
 
@@ -96,17 +111,22 @@ const VerticalFarming = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-8">
-      <h1 className="text-5xl font-bold text-primary-400 mb-8">Pertanian Vertikal Berbasis IoT</h1>
+      <h1 className="text-5xl font-bold text-primary-400 mb-8">
+        Pertanian Vertikal Berbasis IoT
+      </h1>
 
       {/* Deskripsi Fitur */}
       <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-primary-300 text-center mb-8 w-full max-w-4xl">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Deskripsi Fitur</h2>
+        <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+          Deskripsi Fitur
+        </h2>
         <p className="text-gray-600 text-lg mb-4">
-          Sistem IoT berbasis sensor ini memungkinkan monitoring kelembapan, suhu, dan kualitas tanah secara real-time
-          di pertanian vertikal.
+          Sistem IoT berbasis sensor ini memungkinkan monitoring kelembapan,
+          suhu, dan kualitas tanah secara real-time di pertanian vertikal.
         </p>
         <p className="text-gray-600 text-lg">
-          Memungkinkan pertanian dilakukan di ruang terbatas seperti gedung dan area perkotaan tanpa mengorbankan kualitas tanah.
+          Memungkinkan pertanian dilakukan di ruang terbatas seperti gedung dan
+          area perkotaan tanpa mengorbankan kualitas tanah.
         </p>
       </div>
 
@@ -114,9 +134,15 @@ const VerticalFarming = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full max-w-4xl">
         {/* Kelembapan Tanah */}
         <div className="bg-white p-6 rounded-lg shadow-lg text-center relative hover:scale-105 transition-transform duration-300">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Kelembapan Tanah</h2>
-          <div className="text-5xl font-bold text-green-500">{sensorData.moisture}%</div>
-          <p className="text-sm text-gray-600">Data kelembapan tanah yang diperbarui setiap 5 detik</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Kelembapan Tanah
+          </h2>
+          <div className="text-5xl font-bold text-green-500 pt-5">
+            {sensorData.moisture}%
+          </div>
+          <p className="text-sm text-gray-600 pt-5">
+            Data kelembapan tanah yang diperbarui setiap 5 detik
+          </p>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-green-200">
             <div
               className="h-1 bg-green-500 transition-all duration-500"
@@ -127,9 +153,15 @@ const VerticalFarming = () => {
 
         {/* Suhu Ruangan */}
         <div className="bg-white p-6 rounded-lg shadow-lg text-center relative hover:scale-105 transition-transform duration-300">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Suhu Ruangan</h2>
-          <div className="text-5xl font-bold text-blue-500">{sensorData.temperature}°C</div>
-          <p className="text-sm text-gray-600">Suhu ruangan untuk menjaga kondisi pertanian vertikal</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Suhu Ruangan
+          </h2>
+          <div className="text-5xl font-bold text-blue-500 pt-5">
+            {sensorData.temperature}°C
+          </div>
+          <p className="text-sm text-gray-600 pt-5">
+            Suhu ruangan untuk menjaga kondisi pertanian vertikal
+          </p>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-200">
             <div
               className="h-1 bg-blue-500 transition-all duration-500"
@@ -140,9 +172,15 @@ const VerticalFarming = () => {
 
         {/* Kualitas Tanah */}
         <div className="bg-white p-6 rounded-lg shadow-lg text-center relative hover:scale-105 transition-transform duration-300">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Kualitas Tanah</h2>
-          <div className="text-5xl font-bold text-yellow-500">{sensorData.soilQuality}%</div>
-          <p className="text-sm text-gray-600">Kualitas tanah yang menentukan keberhasilan tanaman</p>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Kualitas Tanah
+          </h2>
+          <div className="text-5xl font-bold text-yellow-500 pt-5">
+            {sensorData.soilQuality}%
+          </div>
+          <p className="text-sm text-gray-600 pt-5">
+            Kualitas tanah yang menentukan keberhasilan tanaman
+          </p>
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-yellow-200">
             <div
               className="h-1 bg-yellow-500 transition-all duration-500"
@@ -154,23 +192,31 @@ const VerticalFarming = () => {
 
       {/* Grafik Perubahan Data */}
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Perubahan Data dalam Waktu</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">
+          Perubahan Data dalam Waktu
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Grafik Kelembapan Tanah */}
           <div className="bg-gray-100 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Kelembapan Tanah (7 Hari Terakhir)</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Kelembapan Tanah (7 Hari Terakhir)
+            </h3>
             <Line data={moistureChartData} />
           </div>
 
           {/* Grafik Suhu Ruangan */}
           <div className="bg-gray-100 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Suhu Ruangan (7 Hari Terakhir)</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Suhu Ruangan (7 Hari Terakhir)
+            </h3>
             <Line data={temperatureChartData} />
           </div>
 
           {/* Grafik Kualitas Tanah */}
           <div className="bg-gray-100 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">Kualitas Tanah (7 Hari Terakhir)</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              Kualitas Tanah (7 Hari Terakhir)
+            </h3>
             <Line data={soilQualityChartData} />
           </div>
         </div>
