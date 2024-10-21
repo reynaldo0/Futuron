@@ -8,14 +8,14 @@ import ImpactFeed from './ImpactFeed'
 
 const Home = () => {
   return (
-    <div className="">
+    <>
         <Hero/>
         <Solutions/>
         <Simulations/>
         <Roadmap/>
         <TreeCanvas/>
         <ImpactFeed/>
-    </div>
+    </>
   )
 }
 

@@ -39,92 +39,94 @@ L.Icon.Default.mergeOptions({
 
 const SustainabilityVisualization = () => {
   return (
-    <div className="bg-gray-100">
-      {/* Hero Section */}
+    <div className="">
       <img
         src="/background/wave.svg"
         alt="wave"
         className="w-full"
         draggable="false"
       />
-      <div className="bg-primary-300 text-white pb-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">
-          Visualisasi Data Interaktif tentang Keberlanjutan
-        </h1>
-        <p className="text-lg mb-8">
-          Jelajahi data keberlanjutan dan dampak lingkungan melalui grafik dan
-          peta interaktif.
-        </p>
-      </div>
-
-      {/* Interactive Chart */}
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-center mb-8">
-          Grafik Interaktif
-        </h2>
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex items-center justify-between">
-            <BarChart className="text-green-500" size={400} />{" "}
-            {/* Increased size */}
-            <div className="w-full">
-              <Bar data={data} options={options} />
-            </div>
-          </div>
+      <div className="bg-primary-300 relative">
+        {/* Hero Section */}
+        <div className="bg-primary-300 text-white pb-16 text-center">
+          <h1 className="text-4xl font-bold mb-4">
+            Visualisasi Data Interaktif tentang Keberlanjutan
+          </h1>
+          <p className="text-lg mb-8">
+            Jelajahi data keberlanjutan dan dampak lingkungan melalui grafik dan
+            peta interaktif.
+          </p>
         </div>
-      </div>
 
-      {/* Interactive Map */}
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-center mb-8">
-          Peta Dampak Lingkungan
-        </h2>
-        <div className="bg-white rounded-lg shadow-lg p-6">
-          <div className="flex items-center justify-center">
-            <MapPin className="text-green-500" size={400} />{" "}
-            {/* Increased size */}
-            <div className="w-full h-96">
-              <MapContainer
-                center={[-6.1751, 106.865]}
-                zoom={5}
-                scrollWheelZoom={false}
-                className="h-full"
-              >
-                <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
-                {/* Marker for specific location */}
-                <Marker position={[-6.1751, 106.865]}>
-                  <Popup>
-                    Jakarta: Salah satu kota dengan inisiatif keberlanjutan yang
-                    berkembang.
-                  </Popup>
-                </Marker>
-                {/* Add more markers here */}
-              </MapContainer>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Real-Time Reports */}
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-center mb-8">
-          Laporan Real-Time
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {realTimeReports.map((report, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-lg p-6 flex items-center"
-            >
-              <FileText className="text-green-500 mr-4" size={50} />
-              <div>
-                <h3 className="text-xl font-semibold">{report.title}</h3>
-                <p className="mt-2">{report.description}</p>
+        {/* Interactive Chart */}
+        <div className="container mx-auto px-4 py-12 text-white">
+          <h2 className="text-3xl font-semibold text-center mb-8">
+            Grafik Interaktif
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="flex items-center justify-between">
+              <BarChart className="text-green-500" size={400} />{" "}
+              {/* Increased size */}
+              <div className="w-full">
+                <Bar data={data} options={options} />
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Interactive Map */}
+        <div className="container mx-auto px-4 py-12">
+          <h2 className="text-3xl font-semibold text-center text-white mb-8">
+            Peta Dampak Lingkungan
+          </h2>
+          <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="flex items-center justify-center">
+              <MapPin className="text-green-500" size={400} />{" "}
+              {/* Increased size */}
+              <div className="w-full h-96">
+                <MapContainer
+                  center={[-6.1751, 106.865]}
+                  zoom={5}
+                  scrollWheelZoom={false}
+                  className="h-full"
+                >
+                  <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  />
+                  {/* Marker for specific location */}
+                  <Marker position={[-6.1751, 106.865]}>
+                    <Popup>
+                      Jakarta: Salah satu kota dengan inisiatif keberlanjutan
+                      yang berkembang.
+                    </Popup>
+                  </Marker>
+                  {/* Add more markers here */}
+                </MapContainer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Real-Time Reports */}
+        <div className="container mx-auto px-4 py-12">
+          <h2 className="text-3xl font-semibold text-white text-center mb-8">
+            Laporan Real-Time
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {realTimeReports.map((report, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 flex items-center"
+              >
+                <FileText className="text-green-500 mr-4" size={50} />
+                <div>
+                  <h3 className="text-xl font-semibold">{report.title}</h3>
+                  <p className="mt-2">{report.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
