@@ -3,6 +3,7 @@ import EnergyDashboard from './EnergyDashboard'
 import VerticalFarming from './VerticalFarming'
 import SmartWaste from './SmartWaste'
 import SolarTech from './SolarTech'
+import Sustainability from './Sustainability'
 
 const Environment = () => {
   return (
@@ -11,6 +12,7 @@ const Environment = () => {
       {/* <EnergyDashboard/> */}
       <VerticalFarming/>
       <SmartWaste/>
+      <Sustainability/>
     </div>
    
   )

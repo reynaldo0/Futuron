@@ -95,7 +95,7 @@ const SmartWaste = () => {
         Sistem Pengelolaan Sampah Cerdas
       </h1>
 
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center mb-8 w-full max-w-4xl">
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center mb-8 w-full max-w-4xl border-2 border-primary-300 ">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4">
           Deskripsi Fitur
         </h2>
