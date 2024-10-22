@@ -54,7 +54,7 @@ const MapView = ({ filteredProjects, selectedProject }) => {
         <p>Apakah anda ingin melihat data lainnya?</p>
         <Link
           to="/data"
-          className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-400"
+          className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-300/80"
         >
           <p className="text-white">Lihat Data</p>
         </Link>

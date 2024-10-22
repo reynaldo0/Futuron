@@ -109,7 +109,7 @@ const Roadmap = () => {
               {/* Next Button */}
               <button
                 onClick={handleNext}
-                className="mt-4 bg-primary-300 hover:bg-primary-400 text-white font-bold py-2 px-14 rounded-full transition-all"
+                className="mt-4 bg-primary-300 hover:bg-primary-300/90 text-white font-bold py-2 px-14 rounded-full transition-all"
               >
                 Next
               </button>

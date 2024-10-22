@@ -3,7 +3,7 @@ import { MapPin, Mail } from "lucide-react"; // Import the icons from lucide-rea
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0D1133]">
+    <footer className="bg-primary-400">
       <div className="container mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 flex flex-col justify-between md:mb-0">
@@ -16,18 +16,18 @@ const Footer = () => {
             </a>
 
             <div className="mb-5 mt-5 md:mb-0">
-              <h2 className="mb-6 text-base font-semibold uppercase text-gray-400">
+              <h2 className="mb-6 text-base font-semibold uppercase text-white">
                 Hubungi Kami
               </h2>
-              <ul className="font-medium text-gray-500">
+              <ul className="font-medium text-gray-300/90">
                 <li className="mb-4 flex items-center gap-3 text-base">
-                  <MapPin className="w-5 h-5 text-gray-500" /> {/* Using MapPin icon */}
+                  <MapPin className="w-5 h-5 text-gray-300/90" /> {/* Using MapPin icon */}
                   <a href="#" className="hover:underline">
                     SMK Negeri 46 Jakarta
                   </a>
                 </li>
                 <li className="mb-4 flex items-center gap-3 text-base">
-                  <Mail className="w-5 h-5 text-gray-500" /> {/* Using Mail icon */}
+                  <Mail className="w-5 h-5 text-gray-300/90" /> {/* Using Mail icon */}
                   <a href="#" className="hover:underline">
                     rebellumin@gmail.com
                   </a>
@@ -38,10 +38,10 @@ const Footer = () => {
 
           <div className="grid grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Akses Konten
               </h2>
-              <ul className="font-medium text-gray-500">
+              <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
                   <a href="#home" className="hover:underline">
                     Beranda
@@ -76,10 +76,10 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Sumber Data
               </h2>
-              <ul className="font-medium text-gray-500">
+              <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
                   <a href="https://Detik.com" className="lowercase hover:underline">
                     Detik.com
@@ -114,10 +114,10 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-gray-400">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Credit
               </h2>
-              <ul className="font-medium text-gray-500">
+              <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
                   <a href="https://www.freepik.com/" className="hover:underline">
                     Freepik
@@ -130,7 +130,7 @@ const Footer = () => {
 
         <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-center text-sm text-gray-500">
+          <span className="text-center text-sm text-gray-300/90">
             Dibuat oleh tim Rebellum
           </span>
         </div>

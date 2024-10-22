@@ -10,7 +10,7 @@ const ProjectCard = ({ project, onClick }) => (
     onClick={() => onClick(project)}
   >
     {/* Hover Background Animation */}
-    <div className="absolute inset-0 bg-primary-300 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-in-out origin-center z-0"></div>
+    <div className="absolute inset-0 bg-primary-200 transform scale-x-0 group-hover:scale-x-100 transition-all duration-500 ease-in-out origin-center z-0"></div>
 
     <h2 className="text-xl font-bold text-primary-400 relative z-10 group-hover:text-white">
       {project.lokasi}

@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 import SimulationsData from "../../docs/SimulationsData.jsx";
 
 const Simulations = () => {
-  const [sliderValue, setSliderValue] = useState(50); 
-  
+  const [sliderValue, setSliderValue] = useState(50);
+
   const handleSliderChange = (e) => {
     setSliderValue(e.target.value);
   };
 
-  // Fungsi untuk menghasilkan warna gradien berdasarkan nilai slider
+  // Function to generate gradient color based on slider value
   const getSliderBackground = (value) => {
-    const red = Math.min(255, value * 2.55); // Semakin tinggi value, semakin merah
-    const green = Math.min(255, (100 - value) * 2.55); // Semakin rendah value, semakin hijau
-    return `linear-gradient(to left, rgb(${green}, 255, 100), rgb(255, ${red}, 100))`; // Membalikkan urutan gradien
+    const red = Math.min(255, value * 2.55); // Higher value, more red
+    const green = Math.min(255, (100 - value) * 2.55); // Lower value, more green
+    return `linear-gradient(to left, rgb(${green}, 255, 100), rgb(255, ${red}, 100))`; // Reverse gradient order
   };
 
   return (
@@ -27,17 +27,17 @@ const Simulations = () => {
           {SimulationsData.simulationDescription.subtitle}
         </p>
 
-        {/* Simulasi Bumi */}
+        {/* Earth Simulation */}
         <div className="relative w-full h-96 mb-8 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
           {/* Background: Healthy Earth */}
           <motion.div
             className="absolute top-0 left-0 w-full h-full"
             style={{
-              clipPath: `inset(0 ${100 - sliderValue}% 0 0)`, // Mengubah area yang terpotong berdasarkan nilai slider
-              backgroundImage: `url(${SimulationsData.earthImages.healthy})`, // Gambar bumi sehat
+              clipPath: `inset(0 ${100 - sliderValue}% 0 0)`,
+              backgroundImage: `url(${SimulationsData.earthImages.healthy})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              filter: "brightness(1.1)", // Meningkatkan kecerahan gambar
+              filter: "brightness(1.1)",
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -48,18 +48,18 @@ const Simulations = () => {
           <motion.div
             className="absolute top-0 right-0 w-full h-full"
             style={{
-              clipPath: `inset(0 0 0 ${sliderValue}%)`, // Memotong gambar bumi rusak sesuai nilai slider
-              backgroundImage: `url(${SimulationsData.earthImages.damaged})`, // Gambar bumi rusak
+              clipPath: `inset(0 0 0 ${sliderValue}%)`,
+              backgroundImage: `url(${SimulationsData.earthImages.damaged})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              filter: "brightness(0.7)", // Membuat gambar lebih gelap untuk efek rusak
+              filter: "brightness(0.7)",
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           />
 
-          {/* Overlay efek transisi */}
+          {/* Overlay effect */}
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-100 to-primary-200 opacity-20 pointer-events-none" />
         </div>
 
@@ -81,14 +81,18 @@ const Simulations = () => {
           <span className="text-primary-300">{SimulationsData.sliderLabels.technology}</span>
         </div>
 
-        {/* Informasi tambahan di bawah slider */}
+        {/* Additional information below slider */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           {SimulationsData.cards.map((card, index) => (
             <div
               key={index}
               className={`bg-white text-gray-900 border-2 ${card.borderColor} p-6 rounded-lg shadow-lg relative overflow-hidden group`}
             >
-              <h3 className="text-xl font-bold text-red-700 group-hover:text-white mb-2 relative z-10">
+              <h3
+                className={`text-xl font-bold ${
+                  card.title === "Bumi Lestari" ? "text-primary-300" : "text-red-700"
+                } group-hover:text-white mb-2 relative z-10`}
+              >
                 {card.title}
               </h3>
               <p className="text-gray-700 group-hover:text-white relative z-10">

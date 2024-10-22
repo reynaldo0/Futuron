@@ -17,14 +17,14 @@ const SimulationsData = {
         title: "Bumi Rusak",
         description:
           "Teknologi tidak digunakan dengan bijak, menyebabkan hutan rusak, kualitas udara menurun, suhu global naik, dan populasi satwa liar berkurang drastis.",
-        hoverColor: "bg-red-700",
+        hoverColor: "bg-red-400",
         borderColor: "border-y-red-400",
       },
       {
         title: "Bumi Lestari",
         description:
           "Teknologi digunakan untuk melestarikan hutan, menjaga kualitas udara, mengurangi suhu global, dan melindungi populasi satwa liar.",
-        hoverColor: "bg-primary-300",
+        hoverColor: "bg-primary-200",
         borderColor: "border-y-primary-300",
       },
     ],
