@@ -9,3 +9,20 @@ html {
 .progress-bar {
     transition: width 1s ease-in-out;
 }
+
+body {
+    overflow: hidden;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #81c784;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

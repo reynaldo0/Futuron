@@ -13,7 +13,7 @@ const TechnologySolutions = () => {
           {SolutionsData.map((solution) => (
             <div
               key={solution.id}
-              className="bg-white text-gray-900 shadow-lg rounded-lg p-6 hover:scale-105 transition-transform hover:shadow-2xl hover:bg-primary-200 hover:text-white group"
+              className="bg-white text-gray-900 shadow-lg rounded-lg p-6 hover:scale-105 transition-transform hover:shadow-2xl hover:bg-primary-200 hover:text-white group border-2 border-y-primary-300"
             >
               <div className="flex justify-center mb-4">
                 {solution.icon === "cloud" && (
