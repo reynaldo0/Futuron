@@ -11,8 +11,8 @@ const Environment = () => {
       <SolarTech/>
       {/* <EnergyDashboard/> */}
       <VerticalFarming/>
-      <SmartWaste/>
       <Sustainability/>
+      <SmartWaste/>
     </div>
    
   )
