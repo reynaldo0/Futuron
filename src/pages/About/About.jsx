@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import ApproachSection from './Approuch';
 import Hero from './Hero';
 import Mission from './Mission';
-import ApproachSection from './Approuch';
 import Values from './Values';
 
 const AccordionItem = ({ title, content }) => {

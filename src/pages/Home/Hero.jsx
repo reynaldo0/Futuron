@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Ball from "../../components/Ball";
 
 const Hero = () => {
   const [transition, setTransition] = useState("fade-in");
@@ -57,7 +58,7 @@ const Hero = () => {
           muted
           loop
           className="w-full object-cover"
-          style={{ height: '100vh', minHeight: 'calc(100vh - 50px)' }} // Adjusting height for mobile
+          style={{ height: "100vh", minHeight: "calc(100vh - 50px)" }} // Adjusting height for mobile
         >
           <source
             src="https://sunenergy.id/cfind/source/video/sun-video-banner-v5.mp4"
@@ -90,6 +91,16 @@ const Hero = () => {
             </button>
           </div>
         </div>
+        <Ball
+          classList="absolute right-8 top-36 animation-delay-1000"
+          size={50}
+          color="#D6EFD8"
+        />
+        <Ball
+          classList="absolute left-8 bottom-16 animation-delay-1000"
+          size={50}
+          color="#D6EFD8"
+        />
       </div>
     </section>
   );

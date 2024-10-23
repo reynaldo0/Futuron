@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCloud, FaTree, FaSolarPanel } from "react-icons/fa";
+import { FaCloud, FaSolarPanel, FaTree } from "react-icons/fa";
 import SolutionsData from "../../docs/SolutionsData.jsx";
 
 const TechnologySolutions = () => {
