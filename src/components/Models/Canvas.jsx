@@ -104,19 +104,19 @@ function TreeCanvas() {
       <div className="absolute bottom-20 md:bottom-0 flex justify-center space-x-4 z-[999999]">
         <button
           onClick={() => handleSelectElement("tree")}
-          className="bg-primary-300 hover:bg-primary-300/80 text-white px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
+          className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
         >
           Pohon
         </button>
         <button
           onClick={() => handleSelectElement("plant")}
-          className="bg-primary-300 hover:bg-primary-300/80 text-white px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
+          className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
         >
           Tanaman
         </button>
         <button
           onClick={() => handleSelectElement("animal")}
-          className="bg-primary-300 hover:bg-primary-300/80 text-white px-4 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
+          className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
         >
           Satwa Liar
         </button>

@@ -25,7 +25,7 @@ const Simulations = () => {
         draggable="false"
       />
       <div className="bg-primary-200 pb-12">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center px-4 md:px-0">
           {/* Title and Subtitle */}
           <h2 className="text-4xl font-bold text-white mb-8">
             {SimulationsData.simulationDescription.title}
@@ -77,7 +77,7 @@ const Simulations = () => {
             max="100"
             value={sliderValue}
             onChange={handleSliderChange}
-            className="w-1/2 cursor-pointer border-2 border-white appearance-none h-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-200 transition transform hover:scale-105"
+            className="w-1/2 cursor-pointer scale-150 md:scale-100 border-2 border-white appearance-none h-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-200 transition transform hover:scale-105"
             style={{
               background: getSliderBackground(sliderValue),
             }}
@@ -97,7 +97,7 @@ const Simulations = () => {
             {SimulationsData.cards.map((card, index) => (
               <div
                 key={index}
-                className={`bg-white text-gray-900 border-[2.5px] ${card.borderColor} p-6 rounded-xl shadow-lg relative overflow-hidden group`}
+                className={`bg-white text-gray-900 border-[2.5px] ${card.borderColor} p-6 rounded-xl shadow-lg relative overflow-hidden grou`}
               >
                 <h3
                   className={`text-xl font-bold ${
