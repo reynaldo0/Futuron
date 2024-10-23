@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"; 
 import { milestones } from "../../docs/RoadMapData";
+
 const Roadmap = () => {
   const [selectedMilestoneIndex, setSelectedMilestoneIndex] = useState(0);
 
@@ -49,14 +50,14 @@ const Roadmap = () => {
           <div className="absolute w-full h-1 bg-normal-200 top-1/2 hidden lg:block"></div>
 
           {/* Milestones */}
-          <div className="flex lg:flex-row flex-col justify-center w-full px-4">
+          <div className="md:flex lg:flex-row flex-col justify-center w-full px-4 hidden lg:flex">
             {milestones.map((milestone, index) => (
               <div
                 key={index}
                 className={`relative flex flex-col items-center cursor-pointer group mb-8 lg:mb-0 lg:mx-4 ${
                   index === selectedMilestoneIndex ? "scale-110" : ""
                 }`}
-                onClick={() => setSelectedMilestoneIndex(index)} // Hanya berubah saat diklik
+                onClick={() => setSelectedMilestoneIndex(index)} // Change only on click
               >
                 {/* Milestone Circle */}
                 <div
@@ -94,6 +95,17 @@ const Roadmap = () => {
               exit="exit"
               className="mt-12 bg-primary-300/30 p-8 rounded-lg shadow-lg flex flex-col items-center"
             >
+              {/* Mobile View: Show Only the Selected Milestone */}
+              <div className="lg:hidden">
+                <div
+                  className={`w-14 h-14 ${
+                    "bg-primary-300 text-white border-4 border-primary-200"
+                  } rounded-full flex items-center justify-center shadow-md transform transition-transform`}
+                >
+                  <span className="font-bold">{selectedMilestone.year}</span>
+                </div>
+              </div>
+
               <h3 className="text-3xl font-bold text-primary-300 mb-4">
                 {selectedMilestone.title}
               </h3>
