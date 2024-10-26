@@ -14,11 +14,11 @@ const Accordion = ({ items }) => {
         <div key={index} className="accordion-item my-2">
           <button
             className={`accordion-title flex w-full items-center justify-between rounded-t-lg px-4 py-4 transition duration-300 focus:outline-none ${
-              activeIndex === index ? "bg-primary-400/80" : "bg-primary-400/70"
+              activeIndex === index ? "bg-primary-300/90" : "bg-primary-300/80"
             } text-white`}
             onClick={() => toggleAccordion(index)}
           >
-            <span className="text-base font-medium md:text-lg">
+            <span className="text-base font-semibold md:text-2xl">
               {item.title}
             </span>
             <svg
@@ -41,9 +41,9 @@ const Accordion = ({ items }) => {
             </svg>
           </button>
           <div
-            className={`accordion-content rounded-b-lg px-4 py-2 text-base ${
+            className={`accordion-content rounded-b-lg px-4 py-6 text-xl ${
               activeIndex === index ? "block" : "hidden"
-            } text-white bg-primary-400/60`}
+            } text-white bg-primary-300/75`}
           >
             {item.content}
           </div>
@@ -94,7 +94,7 @@ const Approach = () => {
           <div className="flex justify-center items-center scale-150 text-white text-9xl animate-bounce">
             <span className="font-bold w-52 px-28 pt-16">?</span>
             <img
-              src="/background/roll.svg"
+              src="/background/rroll.svg"
               alt="Wave Decoration"
               className="absolute right-0 top-0 -z-10"
               draggable="false"
