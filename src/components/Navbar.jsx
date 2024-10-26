@@ -93,14 +93,7 @@ const Navbar = () => {
                   Detail
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/quiz"
-                  className="block rounded rounded-l-full rounded-r-full bg-primary-300 px-5 py-2 text-white transition-colors hover:bg-primary-300/80"
-                >
-                  Quiz
-                </Link>
-              </li>
+              
             </ul>
           </div>
         </div>

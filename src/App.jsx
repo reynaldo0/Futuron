@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Environment from "./pages/Enviroment/Environment";
-import Quiz from "./pages/Quiz";
+import { useEffect, useState } from 'react';
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import LoadingScreen from './components/Loading';
+import Navbar from "./components/Navbar";
+import About from "./pages/About/About";
 import Detail from './pages/Detail/Detail';
+import Environment from "./pages/Enviroment/Environment";
+import Home from "./pages/Home/Home";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +38,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/data" element={<Environment />} />
-              <Route path="/quiz" element={<Quiz />} />
               <Route path="/detail" element={<Detail />} />
             </Routes>
           </AnimatePresence>
