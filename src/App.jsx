@@ -8,6 +8,7 @@ import Environment from "./pages/Enviroment/Environment";
 import Quiz from "./pages/Quiz";
 import Footer from "./components/Footer";
 import LoadingScreen from './components/Loading';
+import Detail from './pages/Detail/Detail';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/data" element={<Environment />} />
               <Route path="/quiz" element={<Quiz />} />
+              <Route path="/detail" element={<Detail />} />
             </Routes>
           </AnimatePresence>
           <Footer />
