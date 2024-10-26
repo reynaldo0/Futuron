@@ -1,40 +1,30 @@
-import React from "react";
-import { FlipWords } from "../../components/FlipWords";
-
-const words = [
-  "Selamat Datang!",
-  "Buatlah Daftar Tamu Anda!",
-  "Listlah Tamu Anda Sekarang!"
-];
+import React from 'react';
 
 const Hero = () => {
   return (
-    <div
-      className="relative h-screen w-full bg-cover bg-center sm:bg-top md:bg-center"
-      style={{
-        backgroundImage: `url(/bumi/background.gif)`,
-      }}
-    >
-      <div className="absolute inset-0 bg-black opacity-75"></div>
-      <div className="absolute bottom-0 left-0 w-full h-60 via-white/20 to-transparent"></div>
-
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
-        {/* Teks dengan FlipWords */}
-        <div className="mt-1">
-          <h1 className="text-4xl md:text-6xl font-bold md:mx-40">
-            <FlipWords className="text-center" words={words} />
-          </h1>
-        </div>
-        <div className="mt-96 absolute">
-        <a
-            href="#about-section"
-            className="mt-8 inline-block px-6 py-3 bg-white text-green-900 font-semibold text-lg rounded-lg hover:bg-gray-200 transition-all"
-          >
-            Pelajari Lebih Lanjut
-          </a>
-        </div>
+    <section className="flex flex-col md:flex-row items-center justify-between w-full h-screen bg-green-50">
+      {/* Left Content */}
+      <div className="md:w-1/2 px-8 md:px-16 text-center md:text-left space-y-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-green-800">
+          Membangun Masa Depan Berkelanjutan
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700">
+          Kami berkomitmen untuk menggunakan teknologi hijau dalam setiap langkah yang kami ambil. Bersama, kita menciptakan dampak positif bagi lingkungan dan mewariskan planet yang lebih sehat untuk generasi mendatang.
+        </p>
+        <button className="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition-all">
+          Pelajari Lebih Lanjut
+        </button>
       </div>
-    </div>
+
+      {/* Right Image */}
+      <div className="md:w-1/2 h-full flex justify-center items-center">
+        <img
+          src="/illustrasi/heroabout.png"
+          alt="Inovasi Teknologi Hijau"
+          className="w-10/12 h-auto rounded-lg object-cover"
+        />
+      </div>
+    </section>
   );
 };
 

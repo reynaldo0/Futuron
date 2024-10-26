@@ -119,8 +119,8 @@ const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
-                  <a href="https://www.freepik.com/" className="hover:underline">
-                    Freepik
+                  <a href="https://www.pinterest.com" className="hover:underline">
+                    Pinterest
                   </a>
                 </li>
               </ul>

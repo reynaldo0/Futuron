@@ -98,7 +98,7 @@ const Simulations = () => {
             {SimulationsData.cards.map((card, index) => (
               <div
                 key={index}
-                className={`bg-white text-gray-900 border-[2.5px] ${card.borderColor} p-6 rounded-xl shadow-lg relative overflow-hidden grou`}
+                className={`bg-white text-gray-900 border-[2.5px] ${card.borderColor} p-6 rounded-xl shadow-lg relative overflow-hidden group`}
               >
                 <h3
                   className={`text-xl font-bold ${

@@ -22,18 +22,14 @@ const Accordion = ({ items }) => {
               {item.title}
             </span>
             <svg
-              className={`plus-icon h-4 w-4 fill-current ${
-                activeIndex === index ? "hidden" : ""
-              }`}
+              className={`plus-icon h-4 w-4 fill-current ${activeIndex === index ? "hidden" : ""}`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
               <path d="M7 10V4a1 1 0 0 1 2 0v6h6a1 1 0 1 1 0 2h-6v6a1 1 0 1 1-2 0v-6H4a1 1 0 1 1 0-2h6z" />
             </svg>
             <svg
-              className={`minus-icon h-4 w-4 fill-current ${
-                activeIndex === index ? "" : "hidden"
-              }`}
+              className={`minus-icon h-4 w-4 fill-current ${activeIndex === index ? "" : "hidden"}`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -54,35 +50,33 @@ const Accordion = ({ items }) => {
 };
 
 // Accordion items data for "Pendekatan Kami"
+// Accordion items data for "Pendekatan Kami"
 const accordionItems = [
   {
-    title: "Inovasi",
+    title: "Inovasi Berkelanjutan",
     content:
-      "Kami menjelajahi perkembangan terbaru dalam teknologi ramah lingkungan, mulai dari inovasi energi surya hingga kota pintar dan bahan ramah lingkungan. Tim kami berdedikasi untuk menemukan solusi berkelanjutan yang bermanfaat bagi masyarakat dan planet ini.",
+      "Kami berkomitmen untuk terus berinovasi dalam teknologi hijau, termasuk pengembangan energi terbarukan dan solusi ramah lingkungan yang mengurangi jejak karbon. Setiap inovasi yang kami hadirkan bertujuan untuk menciptakan dampak positif bagi lingkungan.",
   },
   {
-    title: "Edukasi",
+    title: "Pendidikan Transformasional",
     content:
-      "Kami percaya bahwa kesadaran adalah langkah pertama menuju perubahan. Melalui alat interaktif, konten yang mendalam, dan contoh nyata, kami mengedukasi individu dan bisnis tentang manfaat mengadopsi teknologi berkelanjutan.",
+      "Edukasi adalah fondasi perubahan. Kami menyediakan sumber daya, workshop, dan konten interaktif untuk membekali individu dan bisnis dengan pengetahuan tentang praktik berkelanjutan dan manfaat teknologi hijau.",
   },
   {
-    title: "Aksi",
+    title: "Tindakan Nyata",
     content:
-      "Perubahan dimulai dengan aksi. Melalui proyek dan inisiatif kami, kami bekerja dengan komunitas, organisasi, dan inovator untuk menerapkan solusi nyata yang mengurangi dampak lingkungan.",
+      "Kami percaya bahwa tindakan nyata adalah kunci untuk menciptakan perbedaan. Melalui kolaborasi dengan komunitas dan organisasi, kami menjalankan proyek yang berdampak, membantu implementasi solusi berkelanjutan untuk tantangan lingkungan.",
   },
 ];
+
 
 // Section with "?" animated icon
 const Approach = () => {
   return (
-    <section className="py-16 px-6 md:px-20 relative">
+    <section className="py-24 px-6 md:px-20 relative">
       <h2 className="text-4xl font-bold text-center text-primary-400">
         Pendekatan Kami
       </h2>
-      <p className="mt-6 text-lg text-center text-gray-800">
-        Inovasi, Edukasi, dan Aksi
-      </p>
-
       <div className="mt-12 flex flex-col md:flex-row items-start gap-12">
         {/* Accordion section */}
         <div className="w-full md:flex-1">
@@ -94,7 +88,7 @@ const Approach = () => {
           <div className="flex justify-center items-center scale-150 text-white text-9xl animate-bounce">
             <span className="font-bold w-52 px-28 pt-16">?</span>
             <img
-              src="/background/rroll.svg"
+              src="/background/roll.svg"
               alt="Wave Decoration"
               className="absolute right-0 top-0 -z-10"
               draggable="false"
