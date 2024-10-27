@@ -37,10 +37,10 @@ const Hero = () => {
       <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
         <div className="text-center px-4 mx-auto max-w-screen-xl">
           <h1 className="mb-4 text-4xl text-white font-bold tracking-tight font-poppins leading-none md:text-5xl lg:text-6xl md:px-32 pt-32">
-            Teknologi Hijau, Langkah Kecil Berdampak Besar!
+            Teknologi Hijau, Langkah Kecil <span className="md:text-primary-200">Berdampak Besar!</span>
           </h1>
           <p className="mb-8 text-sm font-normal text-gray-300 lg:text-base sm:px-16 lg:px-48 md:scale-110 pt-2 md:pt-5">
-            Mengubah Dunia dengan Inovasi, Satu Langkah Kecil untuk Masa Depan
+            Mengubah Dunia dengan Teknologi, Satu Langkah Kecil untuk Masa Depan
             Bumi
           </p>
           

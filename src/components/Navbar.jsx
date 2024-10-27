@@ -26,10 +26,10 @@ const Navbar = () => {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://sunenergy.id/cfind/source/images/sunenergy_logo_homepage.png"
-              className="h-auto w-[150px]"
+              src="/logo.png"
+              className="h-auto w-8 scale-150"
               alt="gambar logo"
-            />
+            /><p className="text-2xl tracking-wider text-primary-400 font-bold">Hallo</p>
           </a>
           <button
             ref={collapseBtnRef}
