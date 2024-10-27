@@ -8,8 +8,8 @@ const Detail = () => {
   return (
     <div>
         <HeroDetail/>
-        <MilestonesPage/>
         <Community/>
+        <MilestonesPage/>
         <Events/>
     </div>
   )

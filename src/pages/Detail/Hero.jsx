@@ -2,9 +2,10 @@ import React from "react";
 import { FlipWords } from "../../components/FlipWords";
 
 const words = [
-  "Selamat Datang!",
-  "Buatlah Daftar Tamu Anda!",
-  "Listlah Tamu Anda Sekarang!"
+  "Mari Kita Lindungi Lingkungan Bersama!",
+  "Jelajahi Solusi Ramah Lingkungan!",
+  "Dukung Bumi dengan Teknologi Hijau!",
+  "Bergabunglah dalam Aksi Nyata untuk Alam!"
 ];
 
 const HeroDetail = () => {
