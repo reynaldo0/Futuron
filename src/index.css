@@ -3,26 +3,39 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .progress-bar {
-    transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 body {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #81c784;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
   }
-  
-  .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #81c784;
+  50% {
+    transform: translateX(-5px);
   }
-  
-  .hidden {
-    display: none;
-  }
+}
+
+.shake-animation {
+  animation: shake 0.8s infinite;
+}
   

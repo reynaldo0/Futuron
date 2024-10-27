@@ -123,6 +123,26 @@ const Footer = () => {
                     Pinterest
                   </a>
                 </li>
+                <li className="mb-4">
+                  <a href="https://www.morfo.rest/article/drones-reforest" className="hover:underline">
+                    Drone
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="https://www.exaputra.com/2024/03/chile-wind-energy.html" className="hover:underline">
+                    Energy Angin
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="https://emerhub.com/indonesia/how-to-open-an-electric-vehicle-charging-station-in-indonesia/" className="hover:underline">
+                    Mobil Listrik
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="https://www.linkedin.com/pulse/eliminasi-sampah-plastik-demi-lingkungan-yang-/" className="hover:underline">
+                    Sampah Plastik
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

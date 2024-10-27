@@ -50,7 +50,7 @@ const MapView = ({ filteredProjects, selectedProject }) => {
       )}
 
       {/* Popup di sebelah kiri atas */}
-      <div className="absolute top-4 right-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] animate-shake hover:animate-none">
+      <div className="absolute top-4 right-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] shake-animation hover:animate-none">
         <p>Apakah anda ingin melihat data lainnya?</p>
         <Link
           to="/data"

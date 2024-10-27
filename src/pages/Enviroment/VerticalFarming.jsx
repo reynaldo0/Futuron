@@ -118,7 +118,6 @@ const VerticalFarming = () => {
       {/* Deskripsi Fitur */}
       <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-primary-300 mb-8 w-full max-w-4xl">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4 text-center">
-          Deskripsi Fitur
         </h2>
         <p className="text-gray-600 text-lg mb-4 md:pr-10">
           Sistem IoT berbasis sensor ini memungkinkan monitoring kelembapan,

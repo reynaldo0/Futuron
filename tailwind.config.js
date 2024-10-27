@@ -11,9 +11,6 @@ export default {
           400: "#1A5319",
         },
       },
-      animation: {
-        shake: "shake 1s ease-in-out infinite",
-      },
       keyframes: {
         shake: {
           "0%, 100%": { transform: "translateX(0)" },
@@ -21,8 +18,6 @@ export default {
           "50%": { transform: "translateX(10px)" },
           "75%": { transform: "translateX(-10px)" },
         },
-      },
-      keyframes: {
         floating: {
           "0%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-20px)" },
@@ -31,6 +26,7 @@ export default {
       },
       animation: {
         floating: "floating 3s ease-in-out infinite",
+        shake: "shake 1s ease-in-out infinite",
       },
     },
   },

@@ -41,7 +41,7 @@ function TreeCanvas() {
   return (
     <div className="relative w-full  mx-auto h-screen flex justify-center items-center">
       <h1 className="absolute top-5 text-4xl mx-5 md:mx-0 font-bold text-center text-primary-400 z-10">
-        Bring Nature to Your Space
+      Menelusuri Kreasi 3D
       </h1>
       
       <div className="relative bg-primary-200/40 w-[80%] h-[50%] md:w-[50%] md:h-[70%] rounded-full shadow-xl overflow-hidden">
@@ -112,13 +112,13 @@ function TreeCanvas() {
           onClick={() => handleSelectElement("plant")}
           className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
         >
-          Tanaman
+          Mobil
         </button>
         <button
           onClick={() => handleSelectElement("animal")}
           className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
         >
-          Satwa Liar
+          Drone
         </button>
       </div>
     </div>

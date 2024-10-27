@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation(); // Get the current location
   const collapseBtnRef = useRef(null);
   const collapseRef = useRef(null);
 
@@ -56,44 +57,25 @@ const Navbar = () => {
           </button>
           <div className="w-full hidden md:block md:w-auto" ref={collapseRef}>
             <ul className="mt-4 flex flex-col h-full rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
-              
-              <li>
-                <Link
-                  id="nav-about"
-                  to="/"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  id="nav-pengaruh"
-                  to="/about"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  id="nav-data"
-                  to="/data"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300"
-                >
-                  Data
-                </Link>
-              </li>
-              <li>
-                <Link
-                  id="nav-data"
-                  to="/detail"
-                  className="relative block rounded px-3 py-2 text-gray-900 before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] hover:bg-gray-100 hover:before:scale-x-100 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300"
-                >
-                  Detail
-                </Link>
-              </li>
-              
+              {/** Navbar Links **/}
+              {["/", "/about", "/detail", "/data"].map((path, index) => {
+                const linkNames = ["Home", "About", "Detail", "Data"];
+                const isActive = location.pathname === path; // Check if the current path matches the link's path
+                return (
+                  <li key={index}>
+                    <Link
+                      to={path}
+                      className={`relative block rounded px-3 py-2 ${
+                        isActive
+                          ? "text-primary-400 before:scale-x-100"
+                          : "text-gray-900 hover:before:scale-x-100"
+                      } before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300`}
+                    >
+                      {linkNames[index]}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
