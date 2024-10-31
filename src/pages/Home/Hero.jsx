@@ -1,62 +1,36 @@
-import { useEffect, useRef, useState } from "react";
-import Ball from "../../components/Ball";
+import React from "react";
 
 const Hero = () => {
-  const [transition, setTransition] = useState("fade-in");
-  const gifSrc = "/background/hero.gif"; // Update with the path to your GIF
-
-  useEffect(() => {
-    document.body.style.overflowX = "hidden";
-    document.body.style.overflowY = "auto";
-
-    return () => {
-      document.body.style.overflowX = "auto";
-      document.body.style.overflowY = "auto";
-    };
-  }, []);
-
-  const handleClick = () => {
-    setTransition("fade-out");
-    setTimeout(() => {
-      setTransition("fade-in");
-    }, 500);
-  };
-
   return (
-    <section className={`relative w-full min-h-screen ${transition}`}>
-      <div className="relative w-full">
-        <div className="absolute inset-0 bg-black/70 w-full h-full"></div>
-        <img
-          src={gifSrc} // Displaying GIF instead of video
-          alt="Descriptive alt text"
-          className="w-full object-cover"
-          style={{ height: "100vh", minHeight: "calc(100vh - 50px)" }} // Adjusting height for mobile
-        />
-      </div>
+    <div
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/background/hero.gif')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white/100 via-white/40 to-transparent"></div>
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
-        <div className="text-center px-4 mx-auto max-w-screen-xl">
-          <h1 className="mb-4 text-4xl text-white font-bold tracking-tight font-poppins leading-none md:text-5xl lg:text-6xl md:px-32 pt-32">
-            Teknologi Hijau, Langkah Kecil <span className="md:text-primary-200">Berdampak Besar!</span>
-          </h1>
-          <p className="mb-8 text-sm font-normal text-gray-300 lg:text-base sm:px-16 lg:px-48 md:scale-110 pt-2 md:pt-5">
-            Mengubah Dunia dengan Teknologi, Satu Langkah Kecil untuk Masa Depan
-            Bumi
-          </p>
-          
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-4xl md:text-7xl font-black mb-1 text-stroke-md pt-16 md:text-stroke-lg font-sans tracking-wide pb-5">
+          NATURE IN
+        </h1>
+        <div className="relative w-full max-w-md mx-auto mb-6">
+          <div className="absolute inset-x-5 top-1/2 border-t-4 border-primary-300" />
         </div>
-        <Ball
-          classList="absolute right-8 top-36 animation-delay-1000"
-          size={50}
-          color="#D6EFD8"
-        />
-        <Ball
-          classList="absolute left-8 bottom-16 animation-delay-1000"
-          size={50}
-          color="#D6EFD8"
-        />
+
+        <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
+          Platform ini menggabungkan teknologi ramah lingkungan
+          untuk menyediakan data real-time, illustrasi lingkungan hijau, mengajak masyarakat untuk berkolaborasi dengan tetap peduli pada lingkungan.
+        </p>
+
+        <a href="#map">
+          <button className="bg-primary-300 hover:bg-primary-300/90 text-white px-6 py-3 rounded-xl font-semibold ">
+            Jelajahi Sekarang
+          </button>
+        </a>
       </div>
-    </section>
+    </div>
   );
 };
 
