@@ -28,7 +28,7 @@ const Simulations = () => {
       <div className="bg-primary-200 pb-12">
         <div className="container mx-auto text-center px-4 md:px-0">
           {/* Title and Subtitle */}
-          <h2 className="text-4xl pt-10 font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-5xl pt-10 font-bold text-white mb-8">
             {SimulationsData.simulationDescription.title}
           </h2>
           <p className="text-gray-100 mb-8">

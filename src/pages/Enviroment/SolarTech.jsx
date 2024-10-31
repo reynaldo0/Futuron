@@ -8,7 +8,7 @@ const SolarTechHero = () => {
     <div className="bg-white pb-12">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary-400">
-          Pengembangan Alam <TypedText/>
+          Pengembangan Alam<TypedText/>
         </h1>
         <p className="text-lg mb-16 text-primary-400/90">
           Memperbaiki dan melestarikan lingkungan dengan energi bersih dan berkelanjutan.

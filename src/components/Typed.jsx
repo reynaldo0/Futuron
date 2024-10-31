@@ -21,8 +21,8 @@ const TypedText = () => {
   }, []);
 
   return (
-    <h1 className="text-5xl font-bold mt-7 mb-4">
-      <span ref={el} className='bg-primary-400/80 px-3 rounded-e-3xl py-1 text-white' />
+    <h1 className="md:text-5xl font-bold md:mt-7 mb-4">
+      <span ref={el} className='md:bg-primary-400/80 px-3 rounded-e-3xl py-1 md:text-white' />
     </h1>
   );
 };

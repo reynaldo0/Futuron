@@ -39,8 +39,8 @@ function TreeCanvas() {
   };
 
   return (
-    <div className="relative w-full  mx-auto h-screen flex justify-center items-center">
-      <h1 className="absolute top-5 text-4xl mx-5 md:mx-0 font-bold text-center text-primary-400 z-10">
+    <div className="relative w-full mx-auto h-screen flex justify-center items-center">
+      <h1 className="absolute top-5 text-4xl md:text-5xl mx-5 md:mx-0 font-bold text-center text-primary-400 z-10">
       Menelusuri Kreasi 3D
       </h1>
       

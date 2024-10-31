@@ -31,9 +31,9 @@ const Roadmap = () => {
   };
 
   return (
-    <section className="py-16 bg-normal-100 text-normal-300">
+    <section className="py-24 bg-normal-100 text-normal-300">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-primary-400 mb-5">
+        <h2 className="text-4xl md:text-5xl font-bold text-primary-400 mb-5">
           Langkah Teknologi Hijau
         </h2>
         <p className="text-normal-200 mb-12">
