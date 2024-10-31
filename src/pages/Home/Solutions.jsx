@@ -4,7 +4,7 @@ import SolutionsData from "../../docs/SolutionsData.jsx";
 
 const TechnologySolutions = () => {
   return (
-    <section className="py-16 text-white">
+    <section className="py-16 text-white" id="solutions">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Solusi Teknologi

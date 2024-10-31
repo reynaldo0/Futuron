@@ -33,7 +33,7 @@ const Roadmap = () => {
   return (
     <section className="py-16 bg-normal-100 text-normal-300">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-primary-300 mb-5">
+        <h2 className="text-4xl font-bold text-primary-400 mb-5">
           Langkah Teknologi Hijau
         </h2>
         <p className="text-normal-200 mb-12">
@@ -121,7 +121,7 @@ const Roadmap = () => {
               {/* Next Button */}
               <button
                 onClick={handleNext}
-                className="mt-4 bg-primary-300 hover:bg-primary-300/90 text-white font-bold py-2 px-14 rounded-full transition-all"
+                className="mt-4 bg-primary-300 hover:bg-primary-300/80 text-white font-bold py-2 px-14 rounded-full transition-all"
               >
                 Next
               </button>

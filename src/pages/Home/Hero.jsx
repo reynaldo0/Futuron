@@ -26,8 +26,8 @@ const Hero = () => {
           masyarakat untuk berkolaborasi dengan tetap peduli pada lingkungan.
         </p>
 
-        <a href="#map">
-          <button className="bg-primary-300 hover:bg-primary-300/90 text-white px-6 py-3 rounded-xl font-semibold ">
+        <a href="#solutions">
+          <button className="bg-primary-300 rounded-full hover:bg-primary-300/80 text-white px-6 py-3 font-semibold ">
             Jelajahi Sekarang
           </button>
         </a>

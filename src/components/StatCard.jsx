@@ -35,10 +35,10 @@ const StatCard = ({ title, value }) => {
   return (
     <div
       ref={cardRef}  // Attach the ref to the div for intersection observer
-      className="bg-white shadow-lg rounded-lg p-6 text-center transition-transform duration-500 transform hover:scale-105"
+      className="bg-white shadow-lg border-y-2 border-primary-300 rounded-lg p-6 text-center transition-transform duration-500 transform hover:scale-105"
     >
       <h3 className="text-xl font-semibold text-gray-700">{title}</h3>
-      <p className="text-3xl font-bold text-green-600">
+      <p className="text-3xl font-bold text-primary-300">
         {isVisible ? (
           <CountUp
             start={0}  // Start counting from 0
