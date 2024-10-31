@@ -81,18 +81,18 @@ const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
-                  <a href="https://Detik.com" className="lowercase hover:underline">
-                    Detik.com
+                  <a href="https://www.morfo.rest/" className="lowercase hover:underline">
+                    Mofro.rest
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://Kompasiana.com" className="lowercase hover:underline">
-                    Kompasiana
+                  <a href="https://www.clearwatercf.com/" className="lowercase hover:underline">
+                    ClearWatercf.com
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://Channel9.id" className="lowercase hover:underline">
-                    Channel9.id
+                  <a href="https://emerhub.com/" className="lowercase hover:underline">
+                    Emerhub.com
                   </a>
                 </li>
                 <li className="mb-4">

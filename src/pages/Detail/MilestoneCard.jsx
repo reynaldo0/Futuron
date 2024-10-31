@@ -103,7 +103,7 @@ const Card = ({
             onClick={onToggle}
             className="bg-primary-300 absolute bottom-4 text-white py-2 px-6 mt-4 hover:bg-primary-dark transition-colors duration-300 rounded-lg"
           >
-            {isOpen ? "Baca Kurang" : "Baca Selengkapnya"}
+            {isOpen ? "Tutup" : "Selangkapnya"}
           </button>
         </div>
       </div>
@@ -121,7 +121,8 @@ const MilestonesPage = () => {
   return (
     <div className="container mx-auto p-8 pt-20">
       <h1 className="text-4xl font-bold text-center mb-8">
-        Milestone Proyek Lingkungan
+      Menciptakan Masa Depan Hijau
+
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {milestones.map((milestone, index) => (

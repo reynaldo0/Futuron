@@ -23,7 +23,7 @@ const communityShowcase = [
 
 const CommunityShowcase = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p-8 py-24">
       <h1 className="text-4xl font-bold text-center mb-8">Kolaborasi dan Komunitas</h1>
       <p className="text-center text-lg mb-6">
         Bergabunglah dengan kami dalam berbagai inisiatif untuk mendukung keberlanjutan dan lingkungan.

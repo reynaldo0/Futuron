@@ -65,7 +65,7 @@ const SustainabilityVisualization = () => {
           </h2>
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center justify-between">
-              <BarChart className="text-green-500" size={400} />{" "}
+              <BarChart className="text-green-500" size={200} />{" "}
               {/* Increased size */}
               <div className="w-full">
                 <Bar data={data} options={options} />
@@ -81,7 +81,7 @@ const SustainabilityVisualization = () => {
           </h2>
           <div className="bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center justify-center">
-              <MapPin className="text-green-500" size={400} />{" "}
+              <MapPin className="text-green-500" size={200} />{" "}
               {/* Increased size */}
               <div className="w-full h-96">
                 <MapContainer
