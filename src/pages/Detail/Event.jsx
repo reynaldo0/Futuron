@@ -74,7 +74,7 @@ const Events = () => {
   return (
     <div className="container mx-auto py-32 p-8">
       <ToastContainer style={{ zIndex: 9999999999 }} />
-      <h2 className="text-3xl font-bold text-center mb-6">Acara Mendatang</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-primary-400 text-center mb-6">Acara Mendatang</h2>
       <Slider {...settings}>
         {upcomingEvents.map((event) => (
           <div key={event.title} className=""> {/* Add margin on each card */}

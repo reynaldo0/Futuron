@@ -15,7 +15,7 @@ const Accordion = ({ items }) => {
         <div key={index} className="accordion-item my-2">
           <button
             className={`accordion-title flex w-full items-center justify-between rounded-t-lg px-4 py-4 transition duration-300 focus:outline-none ${
-              activeIndex === index ? "bg-primary-300/90" : "bg-primary-300/80"
+              activeIndex === index ? "bg-primary-300/50" : "bg-primary-300/40"
             } text-white`}
             onClick={() => toggleAccordion(index)}
           >
@@ -32,7 +32,7 @@ const Accordion = ({ items }) => {
           <div
             className={`accordion-content rounded-b-lg px-4 py-6 text-xl ${
               activeIndex === index ? "block" : "hidden"
-            } text-white bg-primary-300/75`}
+            } text-white bg-primary-300/70`}
           >
             {item.content}
           </div>
@@ -72,7 +72,7 @@ const Approach = () => {
         draggable="false"
       />
       <section className="px-6 md:px-20 pb-32 relative bg-primary-200">
-        <h2 className="text-4xl font-bold text-center text-white">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-white">
           Tujuan Kami
         </h2>
         <div className="mt-12 flex flex-col md:flex-row items-start gap-12">

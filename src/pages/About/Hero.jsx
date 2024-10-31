@@ -16,7 +16,7 @@ const Hero = () => {
         </p>
           <div className="pt-3">
           <a href="about#tujuan">
-          <button className="bg-primary-300 text-white py-2 px-6 rounded-lg hover:bg-primary-300/80 transition-all">
+          <button className="bg-primary-300 rounded-full text-white py-2 px-6 hover:bg-primary-300/80 transition-all">
               Selanjutnya
             </button>
           </a>

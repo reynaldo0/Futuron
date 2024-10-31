@@ -4,7 +4,7 @@ import { Camera, Target } from 'lucide-react';
 const Mission = () => {
   return (
     <section className="container mx-auto px-4 py-8 my-24">
-      <h2 className="text-3xl font-semibold text-center mb-8">Visi dan Misi Kami</h2>
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-primary-400 mb-8">Visi dan Misi Kami</h2>
       <div className="flex flex-wrap justify-center gap-24">
         {/* Vision Section */}
         <div className="flex flex-col items-center bg-green-100 p-6 rounded-lg shadow-lg max-w-xs">

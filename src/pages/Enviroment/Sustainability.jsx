@@ -49,17 +49,17 @@ const SustainabilityVisualization = () => {
       <div className="bg-primary-200 relative">
         {/* Hero Section */}
         <div className="text-white pb-16 text-center">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Visualisasi Data Interaktif tentang Keberlanjutan
           </h1>
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-2  ">
             Jelajahi data keberlanjutan dan dampak lingkungan melalui grafik dan
             peta interaktif.
           </p>
         </div>
 
         {/* Interactive Chart */}
-        <div className="container mx-auto px-4 py-12 text-white">
+        <div className="container mx-auto px-4 py-5 text-white">
           <h2 className="text-3xl font-semibold text-center mb-8">
             Grafik Interaktif
           </h2>
