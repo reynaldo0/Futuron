@@ -2,7 +2,8 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between w-full h-screen bg-green-50">
+    <section className="flex flex-col  md:flex-row items-center justify-between w-full h-screen bg-green-50">
+      
       {/* Left Content */}
       <div className="md:w-1/2 px-8 md:px-16 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-green-800">

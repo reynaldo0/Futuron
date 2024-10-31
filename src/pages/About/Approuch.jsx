@@ -22,14 +22,18 @@ const Accordion = ({ items }) => {
               {item.title}
             </span>
             <svg
-              className={`plus-icon h-4 w-4 fill-current ${activeIndex === index ? "hidden" : ""}`}
+              className={`plus-icon h-4 w-4 fill-current ${
+                activeIndex === index ? "hidden" : ""
+              }`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
               <path d="M7 10V4a1 1 0 0 1 2 0v6h6a1 1 0 1 1 0 2h-6v6a1 1 0 1 1-2 0v-6H4a1 1 0 1 1 0-2h6z" />
             </svg>
             <svg
-              className={`minus-icon h-4 w-4 fill-current ${activeIndex === index ? "" : "hidden"}`}
+              className={`minus-icon h-4 w-4 fill-current ${
+                activeIndex === index ? "" : "hidden"
+              }`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -69,34 +73,41 @@ const accordionItems = [
   },
 ];
 
-
 // Section with "?" animated icon
 const Approach = () => {
   return (
-    <section className="py-24 px-6 md:px-20 relative">
-      <h2 className="text-4xl font-bold text-center text-primary-400">
-        Pendekatan Kami
-      </h2>
-      <div className="mt-12 flex flex-col md:flex-row items-start gap-12">
-        {/* Accordion section */}
-        <div className="w-full md:flex-1">
-          <Accordion items={accordionItems} />
-        </div>
+    <div className="">
+      <img
+        src="/background/wave.svg"
+        alt="wave"
+        className="w-full"
+        draggable="false"
+      />
+      <section className="px-6 md:px-20 pb-32 relative bg-primary-200">
+        <h2 className="text-4xl font-bold text-center text-white">
+          Tujuan Kami
+        </h2>
+        <div className="mt-12 flex flex-col md:flex-row items-start gap-12">
+          {/* Accordion section */}
+          <div className="w-full md:flex-1">
+            <Accordion items={accordionItems} />
+          </div>
 
-        {/* Animated question mark icon */}
-        <div className="flex-shrink-0 hidden md:block md:relative">
-          <div className="flex justify-center items-center scale-150 text-white text-9xl animate-bounce">
-            <span className="font-bold w-52 px-28 pt-16">?</span>
-            <img
-              src="/background/roll.svg"
-              alt="Wave Decoration"
-              className="absolute right-0 top-0 -z-10"
-              draggable="false"
-            />
+          {/* Animated question mark icon */}
+          <div className="flex-shrink-0 hidden md:block md:relative">
+            <div className="flex justify-center items-center scale-150 text-white text-9xl animate-bounce">
+              <span className="font-bold w-52 px-28 pt-16">?</span>
+              <img
+                src="/background/roll.svg"
+                alt="Wave Decoration"
+                className="absolute right-0 top-0 -z-10"
+                draggable="false"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
