@@ -12,16 +12,18 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-4xl md:text-7xl mb-3 pt-12 font-extrabold md:font-medium tracking-wider md:pb-5">
-          NATURE IN
+        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-wider md:pb-5 font-sans">
+          FUTURON
         </h1>
+
         <div className="relative w-full max-w-md mx-auto mb-6">
           <div className="absolute inset-x-5 top-1/2 border-t-4 border-primary-300" />
         </div>
 
         <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
-          Platform ini menggabungkan teknologi ramah lingkungan
-          untuk menyediakan data real-time, illustrasi lingkungan hijau, mengajak masyarakat untuk berkolaborasi dengan tetap peduli pada lingkungan.
+          Platform ini menggabungkan teknologi ramah lingkungan untuk
+          menyediakan data real-time, illustrasi lingkungan hijau, mengajak
+          masyarakat untuk berkolaborasi dengan tetap peduli pada lingkungan.
         </p>
 
         <a href="#map">

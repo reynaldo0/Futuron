@@ -9,25 +9,27 @@ const Footer = () => {
           <div className="mb-6 flex flex-col justify-between md:mb-0">
             <a href="#home" className="flex items-center">
               <img
-                src="./assets/rebellum-icon-footer.png"
-                className="me-3 h-auto w-[180px]"
+                src="/logo-f.png"
+                className="me-3 h-auto w-[50px] md:w-[60px]"
                 alt="FlowBite Logo"
-              />
+              /><p className="text-2xl md:text-3xl tracking-wider text-white font-bold">Futuron</p>
             </a>
 
-            <div className="mb-5 mt-5 md:mb-0">
+            <div className="mb-5 mt-10 md:mb-0">
               <h2 className="mb-6 text-base font-semibold uppercase text-white">
                 Hubungi Kami
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4 flex items-center gap-3 text-base">
-                  <MapPin className="w-5 h-5 text-gray-300/90" /> {/* Using MapPin icon */}
+                  <MapPin className="w-5 h-5 text-gray-300/90" />{" "}
+                  {/* Using MapPin icon */}
                   <a href="#" className="hover:underline">
                     SMK Negeri 46 Jakarta
                   </a>
                 </li>
                 <li className="mb-4 flex items-center gap-3 text-base">
-                  <Mail className="w-5 h-5 text-gray-300/90" /> {/* Using Mail icon */}
+                  <Mail className="w-5 h-5 text-gray-300/90" />{" "}
+                  {/* Using Mail icon */}
                   <a href="#" className="hover:underline">
                     rebellumin@gmail.com
                   </a>
@@ -36,7 +38,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-28">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Akses Konten
@@ -81,33 +83,43 @@ const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
-                  <a href="https://www.morfo.rest/" className="lowercase hover:underline">
+                  <a
+                    href="https://www.morfo.rest/"
+                    className="lowercase hover:underline"
+                  >
                     Mofro.rest
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://www.clearwatercf.com/" className="lowercase hover:underline">
+                  <a
+                    href="https://www.detik.com/"
+                    className="lowercase hover:underline"
+                  >
+                    detik.com
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://www.wikipedia.org/"
+                    className="lowercase hover:underline"
+                  >
+                    Wikipedia.org
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://www.clearwatercf.com/"
+                    className="lowercase hover:underline"
+                  >
                     ClearWatercf.com
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://emerhub.com/" className="lowercase hover:underline">
+                  <a
+                    href="https://emerhub.com/"
+                    className="lowercase hover:underline"
+                  >
                     Emerhub.com
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="https://Goodstats.id" className="lowercase hover:underline">
-                    Goodstats.id
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="https://pusiknas.polri.go.id/" className="lowercase hover:underline">
-                    pusiknas.polri
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="https://www.haibunda.com/" className="lowercase hover:underline">
-                    haibunda.com
                   </a>
                 </li>
               </ul>
@@ -119,27 +131,42 @@ const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
-                  <a href="https://www.pinterest.com" className="hover:underline">
+                  <a
+                    href="https://www.pinterest.com"
+                    className="hover:underline"
+                  >
                     Pinterest
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://www.morfo.rest/article/drones-reforest" className="hover:underline">
+                  <a
+                    href="https://www.morfo.rest/article/drones-reforest"
+                    className="hover:underline"
+                  >
                     Drone
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://www.exaputra.com/2024/03/chile-wind-energy.html" className="hover:underline">
+                  <a
+                    href="https://www.exaputra.com/2024/03/chile-wind-energy.html"
+                    className="hover:underline"
+                  >
                     Energy Angin
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://emerhub.com/indonesia/how-to-open-an-electric-vehicle-charging-station-in-indonesia/" className="hover:underline">
+                  <a
+                    href="https://emerhub.com/indonesia/how-to-open-an-electric-vehicle-charging-station-in-indonesia/"
+                    className="hover:underline"
+                  >
                     Mobil Listrik
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="https://www.linkedin.com/pulse/eliminasi-sampah-plastik-demi-lingkungan-yang-/" className="hover:underline">
+                  <a
+                    href="https://www.linkedin.com/pulse/eliminasi-sampah-plastik-demi-lingkungan-yang-/"
+                    className="hover:underline"
+                  >
                     Sampah Plastik
                   </a>
                 </li>
@@ -151,7 +178,7 @@ const Footer = () => {
         <hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-center text-sm text-gray-300/90">
-            Dibuat oleh tim Rebellum
+            Dibuat oleh Reynaldo Yusellino
           </span>
         </div>
       </div>
