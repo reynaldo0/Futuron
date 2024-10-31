@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ChevronDown } from "lucide-react"; // Import the ChevronDown icon
 
 // Accordion component
 const Accordion = ({ items }) => {
@@ -21,24 +22,12 @@ const Accordion = ({ items }) => {
             <span className="text-base font-semibold md:text-2xl">
               {item.title}
             </span>
-            <svg
-              className={`plus-icon h-4 w-4 fill-current ${
-                activeIndex === index ? "hidden" : ""
+            <ChevronDown
+              className={`transition-transform duration-300 ${
+                activeIndex === index ? "rotate-180" : "rotate-0"
               }`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M7 10V4a1 1 0 0 1 2 0v6h6a1 1 0 1 1 0 2h-6v6a1 1 0 1 1-2 0v-6H4a1 1 0 1 1 0-2h6z" />
-            </svg>
-            <svg
-              className={`minus-icon h-4 w-4 fill-current ${
-                activeIndex === index ? "" : "hidden"
-              }`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M4 9h12a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-            </svg>
+              size={24}
+            />
           </button>
           <div
             className={`accordion-content rounded-b-lg px-4 py-6 text-xl ${
@@ -53,7 +42,6 @@ const Accordion = ({ items }) => {
   );
 };
 
-// Accordion items data for "Pendekatan Kami"
 // Accordion items data for "Pendekatan Kami"
 const accordionItems = [
   {
