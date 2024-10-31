@@ -6,7 +6,7 @@ import Values from './Values';
 
 const About = () => {
   return (
-    <div className="bg-gray-50 text-gray-900 min-h-screen">
+    <div className="bg-gray-100 text-gray-900 min-h-screen pt-16 md:pt-5">
 
       <Hero/>
       <ApproachSection/>

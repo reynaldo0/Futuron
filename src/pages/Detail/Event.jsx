@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 const upcomingEvents = [
   {
@@ -39,6 +40,24 @@ const upcomingEvents = [
   },
 ];
 
+const CustomPrevArrow = ({ onClick }) => (
+  <button
+    className="absolute top-1/2 -left-5 md:-left-10 z-10 transform -translate-y-1/2 bg-primary-300 text-white p-3 rounded-full shadow-lg hover:bg-primary-400 transition duration-300"
+    onClick={onClick}
+  >
+    <ArrowLeft/>
+  </button>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+  <button
+    className="absolute top-1/2 -right-5 md:-right-10 z-10 transform -translate-y-1/2 bg-primary-300 text-white p-3 rounded-full shadow-lg hover:bg-primary-400 transition duration-300"
+    onClick={onClick}
+  >
+    <ArrowRight/>
+  </button>
+);
+
 const Events = () => {
   const handleRegistrationClick = () => {
     toast.info("Pendaftaran belum dibuka untuk acara ini!", {
@@ -54,7 +73,8 @@ const Events = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // Add responsive settings
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -72,12 +92,12 @@ const Events = () => {
   };
 
   return (
-    <div className="container mx-auto py-32 p-8">
+    <div className="container mx-auto py-32 p-8 relative">
       <ToastContainer style={{ zIndex: 9999999999 }} />
       <h2 className="text-4xl md:text-5xl font-bold text-primary-400 text-center mb-6">Acara Mendatang</h2>
       <Slider {...settings}>
         {upcomingEvents.map((event) => (
-          <div key={event.title} className=""> {/* Add margin on each card */}
+          <div key={event.title} className="">
             <div className="border border-primary-300 rounded-lg mx-5 shadow-lg p-6 flex flex-col justify-between">
               <h3 className="text-xl font-bold text-primary-400 mb-2">{event.title}</h3>
               <p className="text-primary-400 mb-4">{event.date}</p>
