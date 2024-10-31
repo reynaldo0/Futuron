@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-wider md:pb-5 font-sans">
+        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-wider md:pb-2 font-sans">
           FUTURON
         </h1>
 
@@ -22,15 +23,15 @@ const Hero = () => {
 
         <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
           Platform ini menggabungkan teknologi ramah lingkungan untuk
-          menyediakan data real-time, illustrasi lingkungan hijau, mengajak
+          menyediakan berbagai data, illustrasi lingkungan hijau, serta mengajak
           masyarakat untuk berkolaborasi dengan tetap peduli pada lingkungan.
         </p>
 
-        <a href="#solutions">
+        <Link to="solutions" smooth={true} duration={500} offset={-50}>
           <button className="bg-primary-300 rounded-full hover:bg-primary-300/80 text-white px-6 py-3 font-semibold ">
             Jelajahi Sekarang
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );
