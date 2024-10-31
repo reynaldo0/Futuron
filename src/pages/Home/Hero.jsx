@@ -12,7 +12,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-4xl md:text-7xl font-black mb-1 text-stroke-md pt-16 md:text-stroke-lg font-sans tracking-wide pb-5">
+        <h1 className="text-4xl md:text-7xl mb-3 pt-12 font-extrabold md:font-medium tracking-wider md:pb-5">
           NATURE IN
         </h1>
         <div className="relative w-full max-w-md mx-auto mb-6">
