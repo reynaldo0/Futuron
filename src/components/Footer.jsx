@@ -30,8 +30,8 @@ const Footer = () => {
                 <li className="mb-4 flex items-center gap-3 text-base">
                   <Mail className="w-5 h-5 text-gray-300/90" />{" "}
                   {/* Using Mail icon */}
-                  <a href="#" className="hover:underline">
-                    rebellumin@gmail.com
+                  <a href="mailto:futuron@gmail.com?subject=Hallo Futuron! Saya ingin mengajak anda untuk berkolaborasi..." className="hover:underline">
+                    futuron@gmail.com
                   </a>
                 </li>
               </ul>
@@ -45,35 +45,26 @@ const Footer = () => {
               </h2>
               <ul className="font-medium text-gray-300/90">
                 <li className="mb-4">
-                  <a href="#home" className="hover:underline">
+                  <a href="/" className="hover:underline">
                     Beranda
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#about" className="hover:underline">
+                  <a href="/about" className="hover:underline">
                     Tentang
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#kasus" className="hover:underline">
-                    Kasus
+                  <a href="/detail" className="hover:underline">
+                    Detail
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#pengaruh" className="hover:underline">
-                    Pengaruh
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#data" className="hover:underline">
+                  <a href="/data" className="hover:underline">
                     Data
                   </a>
                 </li>
-                <li className="mb-4">
-                  <a href="#dokumentasi" className="hover:underline">
-                    Dokumentasi
-                  </a>
-                </li>
+                
               </ul>
             </div>
 
