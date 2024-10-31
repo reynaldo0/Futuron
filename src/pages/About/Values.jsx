@@ -3,7 +3,7 @@ import { Globe, Cloud, Heart } from 'lucide-react'; // Use available icons
 
 const Values = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p-8 my-24">
       <h1 className="text-4xl font-bold text-gray-700 mb-8 text-center">Membangun Masa Depan Hijau</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
         {/* First Card: Renewable Energy */}

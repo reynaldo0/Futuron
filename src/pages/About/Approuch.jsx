@@ -64,7 +64,7 @@ const accordionItems = [
 // Section with "?" animated icon
 const Approach = () => {
   return (
-    <div className="">
+    <div className="" id="tujuan">
       <img
         src="/background/wave.svg"
         alt="wave"
