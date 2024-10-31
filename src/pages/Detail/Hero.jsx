@@ -26,14 +26,6 @@ const HeroDetail = () => {
             <FlipWords className="text-center" words={words} />
           </h1>
         </div>
-        <div className="mt-96 absolute">
-        <a
-            href="#about-section"
-            className="mt-8 inline-block px-6 py-3 bg-white text-green-900 font-semibold text-lg rounded-lg hover:bg-gray-200 transition-all"
-          >
-            Pelajari Lebih Lanjut
-          </a>
-        </div>
       </div>
     </div>
   );
