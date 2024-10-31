@@ -36,10 +36,10 @@ const Navbar = () => {
         } transition-colors duration-300`}
       >
         <div className="container mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/logo.png" className="h-auto w-8 scale-150" alt="gambar logo" />
             <p className="text-2xl tracking-wider font-bold">Futuron</p>
-          </a>
+          </Link>
           <button
             ref={collapseBtnRef}
             type="button"
