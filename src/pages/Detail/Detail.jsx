@@ -8,7 +8,7 @@ import JoinCommunity from './JoinCommunity'
 
 const Detail = () => {
   return (
-    <div className='bg-green-50'>
+    <div className='bg-gray-100'>
         <HeroDetail/>
         <GreenTech/>
         <Exam/>
