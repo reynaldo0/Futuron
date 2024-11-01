@@ -1,10 +1,10 @@
 import React from 'react'
 import Community from './Community'
-import GreenTechnology from './GreenTech'
+import Exam from './Exam'
+import GreenTech from './GreenTechs'
 import HeroDetail from './Hero'
 import MilestonesPage from './MilestoneCard'
-import GreenTech from './GreenTechs'
-import Exam from './Exam'
+import JoinCommunity from './JoinCommunity'
 
 const Detail = () => {
   return (
@@ -14,7 +14,7 @@ const Detail = () => {
         <Exam/>
         <Community/>
         <MilestonesPage/>
-        <GreenTechnology/>
+        <JoinCommunity/>
     </div>
   )
 }
