@@ -1,8 +1,7 @@
 import React from 'react'
-import MilestonesPage from './MilestoneCard'
 import Community from './Community'
-import Events from './Event'
 import HeroDetail from './Hero'
+import MilestonesPage from './MilestoneCard'
 
 const Detail = () => {
   return (
@@ -10,7 +9,6 @@ const Detail = () => {
         <HeroDetail/>
         <Community/>
         <MilestonesPage/>
-        <Events/>
     </div>
   )
 }
