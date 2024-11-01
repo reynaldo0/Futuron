@@ -1,10 +1,12 @@
 import React from "react";
+import { FaGlobeAmericas, FaBatteryFull, FaLeaf, FaGem } from "react-icons/fa";
+import leafImage from '/illustrasi/detail.png'; // Adjust the path accordingly
 
 const GreenTech = () => {
   return (
     <>
       {/* Importance Section */}
-      <section className="py-20 bg-green-50">
+      <section className="py-24">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           {/* Left Column: Text Content */}
           <div className="md:w-1/2 mb-10 md:mb-0">
@@ -16,22 +18,31 @@ const GreenTech = () => {
               yang lebih bersih dan berkelanjutan. Berikut adalah alasan utama
               untuk melakukannya:
             </p>
-            <ul className="list-disc list-inside text-lg text-gray-800 mb-6">
-              <li>🌍 Menurunkan emisi karbon dan polusi udara.</li>
-              <li>
-                🔋 Mengurangi ketergantungan pada sumber daya tak terbarukan.
+            <ul className="list-disc list-inside text-lg text-gray-800 mb-6 space-y-2">
+              <li className="flex items-center">
+                <FaGlobeAmericas className="text-green-600 mr-2" />
+                Menurunkan emisi karbon dan polusi udara.
               </li>
-              <li>🌱 Mendorong penggunaan sumber energi terbarukan.</li>
-              <li>🐾 Melestarikan keanekaragaman hayati dan ekosistem.</li>
+              <li className="flex items-center">
+                <FaBatteryFull className="text-green-600 mr-2" />
+                Mengurangi ketergantungan pada sumber daya tak terbarukan.
+              </li>
+              <li className="flex items-center">
+                <FaLeaf className="text-green-600 mr-2" />
+                Mendorong penggunaan sumber energi terbarukan.
+              </li>
+              <li className="flex items-center">
+                <FaGem className="text-green-600 mr-2" />
+                Melestarikan keanekaragaman hayati dan ekosistem.
+              </li>
             </ul>
           </div>
 
           {/* Right Column: Image or Illustration */}
           <div className="md:w-1/2 flex justify-center">
-            {/* Placeholder for an illustration or graphic */}
-            <div className="bg-green-200 rounded-lg p-8 shadow-lg flex items-center justify-center h-full w-10/12">
-              <span className="text-green-800 text-6xl">🌿</span>{" "}
-              {/* Example illustration, can replace with an image */}
+            {/* Leaf Image */}
+            <div className="rounded-lg p-2 md:flex items-center justify-center h-full">
+              <img src={leafImage} alt="Leaf Illustration" className="h-auto max-w-full rounded-lg" />
             </div>
           </div>
         </div>
