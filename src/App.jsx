@@ -8,6 +8,7 @@ import About from "./pages/About/About";
 import Detail from './pages/Detail/Detail';
 import Environment from "./pages/Enviroment/Environment";
 import Home from "./pages/Home/Home";
+import Comunity from "./pages/Comunity/Comunity";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,6 +40,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/data" element={<Environment />} />
               <Route path="/detail" element={<Detail />} />
+              <Route path="/comunity" element={<Comunity />} />
             </Routes>
           </AnimatePresence>
           <Footer />

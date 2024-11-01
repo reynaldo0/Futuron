@@ -85,12 +85,6 @@ const Approach = () => {
           <div className="flex-shrink-0 hidden md:block md:relative">
             <div className="flex justify-center items-center scale-150 text-white text-9xl animate-bounce">
               <span className="font-bold w-52 px-28 pt-16">?</span>
-              <img
-                src="/background/roll.svg"
-                alt="Wave Decoration"
-                className="absolute right-0 top-0 -z-10"
-                draggable="false"
-              />
             </div>
           </div>
         </div>
