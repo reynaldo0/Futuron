@@ -38,8 +38,8 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/data" element={<Environment />} />
-              <Route path="/detail" element={<Detail />} />
+              <Route path="/sumber" element={<Environment />} />
+              <Route path="/temuan" element={<Detail />} />
               <Route path="/comunity" element={<Comunity />} />
             </Routes>
           </AnimatePresence>

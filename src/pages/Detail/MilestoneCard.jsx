@@ -101,7 +101,7 @@ const Card = ({
         <div className="flex justify-start">
           <button
             onClick={onToggle}
-            className="bg-primary-300 absolute bottom-4 text-white py-2 px-6 mt-4 hover:bg-primary-dark transition-colors duration-300 rounded-lg"
+            className="bg-primary-300 hover:bg-primary-300/90 absolute bottom-4 text-white py-2 px-6 mt-4 hover:bg-primary-dark transition-colors duration-300 rounded-lg"
           >
             {isOpen ? "Tutup" : "Selangkapnya"}
           </button>

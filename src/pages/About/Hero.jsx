@@ -19,7 +19,7 @@ const Hero = () => {
           <div className="pt-3">
             <Link to="tujuan" smooth={true} duration={500} offset={-50}>
               <button className="bg-primary-300 rounded-full text-white py-2 px-6 hover:bg-primary-300/80 transition-all">
-                Tujuan Kami
+                Selanjutnya
               </button>
             </Link>
           </div>

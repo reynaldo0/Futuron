@@ -88,14 +88,14 @@ const Navbar = () => {
           </button>
           <div className="w-full hidden md:block md:w-auto" ref={collapseRef}>
             <ul className="mt-4 flex flex-col h-full rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
-              {["/", "/about", "/detail", "/comunity", "/data"].map(
+              {["/", "/about", "/temuan", "/comunity", "/sumber"].map(
                 (path, index) => {
                   const linkNames = [
                     "Beranda",
                     "Tentang",
-                    "Detail",
+                    "Temuan",
                     "Komunitas",
-                    "Data",
+                    "Sumber",
                   ];
                   const isActive = location.pathname === path;
                   return (
