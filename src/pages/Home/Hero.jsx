@@ -13,7 +13,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-wider md:pb-2 font-sans">
+        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-widest md:pb-2 font-sans">
           FUTURON
         </h1>
 
