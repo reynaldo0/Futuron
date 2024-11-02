@@ -38,11 +38,10 @@ const EnergyDashboard = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-4xl md:text-5xl font-bold text-primary-400 mb-6">Energi Terbarukan Pintar</h1>
+    <div className="flex flex-col py-24 items-center justify-center min-h-screen p-8">
+      <h1 className="text-4xl md:text-5xl text-center font-bold text-primary-400 mb-6">Energi Terbarukan Pintar</h1>
       <p className="text-lg text-gray-700 mb-10 text-center max-w-2xl">
         Pantau pembaruan terkini pada energi terbarukan yang dihasilkan dan penggunaannya.
-        Dasbor ini menyediakan informasi real-time mengenai energi yang dihasilkan dari panel surya dan turbin angin, serta tingkat penyimpanan energi saat ini.
       </p>
 
       {/* Container untuk detail energi */}
