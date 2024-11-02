@@ -110,7 +110,7 @@ const VerticalFarming = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-24 justify-center min-h-screen bg-white p-8">
+    <div className="flex flex-col items-center py-24 justify-center min-h-screen p-8">
       <h1 className="text-4xl md:text-5xl font-bold text-primary-400 mb-8">
         Pertanian Vertikal Berbasis IoT
       </h1>

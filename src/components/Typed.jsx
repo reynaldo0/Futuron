@@ -6,7 +6,7 @@ const TypedText = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["Dengan Teknologi Surya"],
+      strings: ["Teknologi Hijau"],
       typeSpeed: 40,
       backSpeed: 50,
       loop: true,
@@ -22,7 +22,7 @@ const TypedText = () => {
 
   return (
     <h1 className="md:text-5xl font-bold md:mt-7 mb-4">
-      <span ref={el} className='md:bg-primary-400/80 px-3 rounded-e-3xl py-1 md:text-white' />
+      <span ref={el} className='md:bg-primary-400/80 md:px-3 rounded-e-3xl py-1 md:text-white' />
     </h1>
   );
 };

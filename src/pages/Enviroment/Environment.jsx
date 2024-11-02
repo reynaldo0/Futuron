@@ -1,15 +1,15 @@
 import React from 'react'
 import EnergyDashboard from './EnergyDashboard'
-import VerticalFarming from './VerticalFarming'
+import Hero from './Hero'
 import SmartWaste from './SmartWaste'
-import SolarTech from './SolarTech'
 import Sustainability from './Sustainability'
+import VerticalFarming from './VerticalFarming'
 
 const Environment = () => {
   return (
-    <div className='pt-40'>
-      <SolarTech/>
-      {/* <EnergyDashboard/> */}
+    <div className='bg-gray-100'>
+      <Hero/>
+      <EnergyDashboard/>
       <VerticalFarming/>
       <Sustainability/>
       <SmartWaste/>
