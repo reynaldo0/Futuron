@@ -24,21 +24,43 @@ const Navbar = () => {
     }
   }, []);
 
-  // Determine default text color based on page
+  // Determine default text color based on page and screen size
   const defaultTextColor =
-    location.pathname === "/" || location.pathname === "/detail" ? "text-white" : "text-black";
+    location.pathname === "/" || location.pathname === "/detail"
+      ? "md:text-white text-black"
+      : "text-black";
 
   return (
     <header>
       <nav
         className={`fixed left-0 top-0 z-[99999] md:px-10 w-full border-gray-200 backdrop-blur-lg ${
-          isScrolled ? "bg-white/70 text-gray-900" : `bg-transparent ${defaultTextColor}`
+          isScrolled
+            ? "bg-white/70 text-gray-900"
+            : `bg-transparent ${defaultTextColor}`
         } transition-colors duration-300`}
       >
         <div className="container mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
-          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/logo.png" className="h-auto w-8 scale-150" alt="gambar logo" />
-            <p className="text-2xl tracking-wider font-bold">Futuron</p>
+          <Link
+            to="/"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="/logo.png"
+              className={`h-auto w-8 scale-150 ${
+                isScrolled ? "md:text-black text-white" : "text-white"
+              }`}
+              alt="gambar logo"
+            />
+            <p
+              className={`text-2xl tracking-wider font-bold ${
+                isScrolled ||
+                (location.pathname !== "/" && location.pathname !== "/detail")
+                  ? "text-black"
+                  : "text-white"
+              }`}
+            >
+              Futuron
+            </p>
           </Link>
           <button
             ref={collapseBtnRef}
@@ -66,24 +88,34 @@ const Navbar = () => {
           </button>
           <div className="w-full hidden md:block md:w-auto" ref={collapseRef}>
             <ul className="mt-4 flex flex-col h-full rounded-lg border border-gray-100 bg-white p-4 font-medium md:mt-0 md:flex-row md:items-center md:space-x-8 md:border-0 md:bg-transparent md:p-0 rtl:space-x-reverse">
-              {["/", "/about", "/detail", "/comunity" , "/data"].map((path, index) => {
-                const linkNames = ["Beranda", "Tentang", "Detail", "Komunitas", "Data"];
-                const isActive = location.pathname === path;
-                return (
-                  <li key={index}>
-                    <Link
-                      to={path}
-                      className={`relative block rounded px-3 py-2 ${
-                        isActive
-                          ? "text-primary-200 before:scale-x-100"
-                          : `${isScrolled ? "text-gray-900" : defaultTextColor} hover:before:scale-x-100 hover:text-primary-400`
-                      } before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300`}
-                    >
-                      {linkNames[index]}
-                    </Link>
-                  </li>
-                );
-              })}
+              {["/", "/about", "/detail", "/comunity", "/data"].map(
+                (path, index) => {
+                  const linkNames = [
+                    "Beranda",
+                    "Tentang",
+                    "Detail",
+                    "Komunitas",
+                    "Data",
+                  ];
+                  const isActive = location.pathname === path;
+                  return (
+                    <li key={index}>
+                      <Link
+                        to={path}
+                        className={`relative block rounded px-3 py-2 ${
+                          isActive
+                            ? "text-primary-200 before:scale-x-100"
+                            : `${
+                                isScrolled ? "text-gray-900" : defaultTextColor
+                              } hover:before:scale-x-100 hover:text-primary-400`
+                        } before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300`}
+                      >
+                        {linkNames[index]}
+                      </Link>
+                    </li>
+                  );
+                }
+              )}
             </ul>
           </div>
         </div>
