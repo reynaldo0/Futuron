@@ -19,9 +19,11 @@ const JoinCommunity = () => {
           </p>
 
           <div className="flex justify-center mb-8">
-            <button className="bg-green-600 text-white rounded-full py-3 px-10 hover:bg-green-700 transition-all shadow-lg transform hover:scale-105">
-              Daftar Sekarang
-            </button>
+            <a href="/comunity">
+              <button className="bg-primary-300 hover:bg-primary-300/80 text-white rounded-full py-3 px-10  transition-all shadow-lg transform hover:scale-105">
+                Daftar Sekarang
+              </button>
+            </a>
           </div>
 
           <div className="text-center">

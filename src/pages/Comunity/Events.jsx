@@ -7,21 +7,42 @@ const events = [
     date: "15 November 2024",
     location: "Online",
     description:
-      "Bergabunglah dalam diskusi tentang inovasi terbaru dalam teknologi hijau bersama para ahli dari seluruh dunia.",
+      "Ikuti diskusi mendalam mengenai teknologi hijau terkini bersama ahli. Dapatkan wawasan terbaru dalam bidang ini.",
   },
   {
-    title: "Workshop Energi Terbarukan",
+    title: "Workshop Energi Terbarukan Pintar",
     date: "25 November 2024",
     location: "Jakarta, Indonesia",
     description:
-      "Pelajari cara memanfaatkan energi terbarukan dalam kehidupan sehari-hari melalui sesi praktik langsung di lokasi.",
+      "Sesi praktis memanfaatkan energi terbarukan sehari-hari. Bimbingan langsung oleh para profesional di lokasi workshop.",
   },
   {
     title: "Konferensi Teknologi dan Lingkungan",
     date: "5 Desember 2024",
     location: "Bandung, Indonesia",
     description:
-      "Konferensi tahunan untuk mendiskusikan perkembangan teknologi yang ramah lingkungan dan dampaknya terhadap masa depan.",
+      "Diskusikan inovasi teknologi ramah lingkungan dalam konferensi tahunan ini. Dampak positif terhadap masa depan dibahas.",
+  },
+  {
+    title: "Pelatihan Teknologi Surya Nasional",
+    date: "10 Januari 2025",
+    location: "Surabaya, Indonesia",
+    description:
+      "Pelatihan intensif dua hari tentang teknologi surya dan aplikasinya di berbagai sektor. Terbuka untuk umum.",
+  },
+  {
+    title: "Seminar Lingkungan dan Energi",
+    date: "20 Januari 2025",
+    location: "Bali, Indonesia",
+    description:
+      "Temukan solusi energi berkelanjutan bersama ahli lingkungan. Mengatasi tantangan energi dengan pendekatan ramah lingkungan.",
+  },
+  {
+    title: "Lokakarya Teknologi Hijau untuk Pemula",
+    date: "5 Februari 2025",
+    location: "Online",
+    description:
+      "Memperkenalkan konsep dasar teknologi hijau dan cara-cara praktis berkontribusi. Cocok untuk pemula dan antusias.",
   },
 ];
 
@@ -155,12 +176,12 @@ const EventsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16" id="events">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-8">
           Acara Komunitas Teknologi Hijau
         </h2>
-        <p className="text-lg text-center text-gray-700 mb-12">
+        <p className="text-lg text-center text-gray-700 mb-12 md:px-24">
           Ikuti berbagai acara komunitas kami untuk memperluas pengetahuan dan
           terhubung dengan orang-orang yang memiliki visi yang sama dalam
           teknologi hijau.
@@ -184,9 +205,9 @@ const EventsSection = () => {
               <p className="text-gray-700 mt-3">{event.description}</p>
               <button
                 onClick={() => openModal(event)}
-                className="mt-4 text-primary-300 hover:text-primary-400 font-medium"
+                className="mt-4 bg-primary-300 py-2 px-4 hover:bg-primary-300/90 rounded-xl text-white  font-medium"
               >
-                Selengkapnya
+                Daftar Sekarang
               </button>
             </div>
           ))}
@@ -195,7 +216,11 @@ const EventsSection = () => {
 
       {/* Modal */}
       {selectedEvent && (
-        <Modal event={selectedEvent} isOpen={isModalOpen} onClose={closeModal} />
+        <Modal
+          event={selectedEvent}
+          isOpen={isModalOpen}
+          onClose={closeModal}
+        />
       )}
     </section>
   );
