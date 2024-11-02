@@ -53,7 +53,7 @@ const MapView = ({ filteredProjects, selectedProject }) => {
       <div className="absolute top-4 right-4 bg-white border rounded-lg shadow-lg p-4 z-[9999] shake-animation hover:animate-none">
         <p>Apakah anda ingin melihat data lainnya?</p>
         <Link
-          to="/data"
+          to="/sumber"
           className="mt-2 inline-block bg-primary-300 py-2 px-4 rounded hover:bg-primary-300/80"
         >
           <p className="text-white">Lihat Data</p>
