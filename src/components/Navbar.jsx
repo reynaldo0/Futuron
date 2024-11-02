@@ -26,7 +26,7 @@ const Navbar = () => {
 
   // Determine default text color based on page and screen size
   const defaultTextColor =
-    location.pathname === "/" || location.pathname === "/detail"
+    location.pathname === "/" || location.pathname === "/temuan"
       ? "md:text-white text-black"
       : "text-black";
 
@@ -54,7 +54,7 @@ const Navbar = () => {
             <p
               className={`text-2xl tracking-wider font-bold ${
                 isScrolled ||
-                (location.pathname !== "/" && location.pathname !== "/detail")
+                (location.pathname !== "/" && location.pathname !== "/temuan")
                   ? "text-black"
                   : "text-white"
               }`}

@@ -4,12 +4,12 @@ import TypedText from "../../components/Typed";
 
 const Hero = () => {
   return (
-    <section className="pb-24 md:pb-0">
+    <section className="pb-24 pt-16 md:pt-0 md:pb-0">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full h-screen">
         {/* Left Content */}
         <div className="md:w-1/2 px-5 md:px-16 text-left space-y-3 md:space-y-6">
           <h1 className="text-3xl md:text-5xl font-bold text-green-800">
-          Data Sumber<TypedText/>
+          Sumber Data<TypedText/>
           </h1>
           <p className="text-lg md:text-xl text-justify md:text-left text-gray-700 mb-4">
           Temukan berbagai sumber data penting tentang teknologi hijau untuk mendukung keberlanjutan dan inisiatif ramah lingkungan. Jelajahi data mengenai energi terbarukan, efisiensi energi, pengelolaan limbah, dan masih banyak lagi.
@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="pt-3">
             <Link to="iotdata" smooth={true} duration={500} offset={-50}>
               <button className="bg-primary-300 rounded-full text-white py-2 px-6 hover:bg-primary-300/80 transition-all">
-                Jelajahi Data
+                Jelajahi Sekarang
               </button>
             </Link>
           </div>

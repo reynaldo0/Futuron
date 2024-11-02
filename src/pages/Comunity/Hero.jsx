@@ -3,14 +3,14 @@ import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section className="pb-24 md:pb-0">
+    <section className="pb-24 pt-16 md:pt-0 md:pb-0">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full h-screen">
         {/* Left Content */}
         <div className="md:w-1/2 px-5 md:px-16 text-left space-y-3 md:space-y-6">
           <h1 className="text-3xl md:text-5xl font-bold text-green-800">
             Bergabung dengan Komunitas Teknologi Hijau
           </h1>
-          <p className="text-lg md:text-xl text-justify md:text-left text-gray-700 mb-4">
+          <p className="text-lg md:text-xl text-justify  text-gray-700 mb-4">
             Temukan kesempatan untuk terhubung, berbagi pengetahuan, dan berkolaborasi dengan para ahli dan penggemar teknologi hijau. 
             Ikuti berbagai acara, webinar, dan diskusi yang didedikasikan untuk menciptakan masa depan berkelanjutan bersama.
           </p>
