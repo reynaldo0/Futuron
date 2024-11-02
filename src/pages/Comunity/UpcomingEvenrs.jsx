@@ -40,7 +40,7 @@ const UpcomingEvents = () => {
               Belajar tentang sumber energi terbarukan dan cara penerapannya dalam kehidupan sehari-hari.
             </p>
             <button
-              className="bg-primary-300 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
+              className="bg-primary-300 hover:bg-primary-300/90 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
               onClick={handleRegistrationClick} // Terapkan handler di sini
             >
               Daftar
@@ -62,7 +62,7 @@ const UpcomingEvents = () => {
               Ikuti seminar ini untuk memahami perkembangan terbaru dalam teknologi ramah lingkungan.
             </p>
             <button
-              className="bg-primary-300 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
+              className="bg-primary-300 hover:bg-primary-300/90 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
               onClick={handleRegistrationClick}
             >
               Daftar
@@ -84,7 +84,7 @@ const UpcomingEvents = () => {
               Diskusi tentang solusi berkelanjutan dan inovasi teknologi untuk masa depan yang lebih hijau.
             </p>
             <button
-              className="bg-primary-300 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
+              className="bg-primary-300 hover:bg-primary-300/90 text-white rounded-lg py-2 px-4 hover:bg-primary-400 transition-all"
               onClick={handleRegistrationClick}
             >
               Daftar

@@ -117,7 +117,7 @@ const VerticalFarming = () => {
         className="w-full"
         draggable="false"
       />
-      <div className="flex flex-col bg-primary-200 items-center py-24 justify-center min-h-screen p-8">
+      <div className="flex flex-col bg-primary-200 items-center py-24 justify-center min-h-screen p-8" id="iotdata">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
           Pertanian Vertikal Berbasis IoT
         </h1>

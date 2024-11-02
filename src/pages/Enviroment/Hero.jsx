@@ -15,7 +15,7 @@ const Hero = () => {
           Temukan berbagai sumber data penting tentang teknologi hijau untuk mendukung keberlanjutan dan inisiatif ramah lingkungan. Jelajahi data mengenai energi terbarukan, efisiensi energi, pengelolaan limbah, dan masih banyak lagi.
           </p>
           <div className="pt-3">
-            <Link to="events" smooth={true} duration={500} offset={-50}>
+            <Link to="iotdata" smooth={true} duration={500} offset={-50}>
               <button className="bg-primary-300 rounded-full text-white py-2 px-6 hover:bg-primary-300/80 transition-all">
                 Jelajahi Data
               </button>
