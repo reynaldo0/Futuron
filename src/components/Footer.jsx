@@ -12,7 +12,10 @@ const Footer = () => {
                 src="/logo-f.png"
                 className="me-3 h-auto w-[50px] md:w-[60px]"
                 alt="FlowBite Logo"
-              /><p className="text-2xl md:text-3xl tracking-wider text-white font-bold">Futuron</p>
+              />
+              <p className="text-2xl md:text-3xl tracking-wider text-white font-bold">
+                Futuron
+              </p>
             </a>
 
             <div className="mb-5 mt-10 md:mb-0">
@@ -30,7 +33,10 @@ const Footer = () => {
                 <li className="mb-4 flex items-center gap-3 text-base">
                   <Mail className="w-5 h-5 text-gray-300/90" />{" "}
                   {/* Using Mail icon */}
-                  <a href="mailto:futuron@gmail.com?subject=Hallo Futuron! Saya ingin mengajak anda untuk berkolaborasi..." className="hover:underline">
+                  <a
+                    href="mailto:futuron@gmail.com?subject=Hallo Futuron! Saya ingin mengajak anda untuk berkolaborasi..."
+                    className="hover:underline"
+                  >
                     futuron@gmail.com
                   </a>
                 </li>
@@ -60,11 +66,15 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
+                  <a href="/comunity" className="hover:underline">
+                    Komunitas
+                  </a>
+                </li>
+                <li className="mb-4">
                   <a href="/data" className="hover:underline">
                     Data
                   </a>
                 </li>
-                
               </ul>
             </div>
 
