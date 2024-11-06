@@ -101,7 +101,7 @@ function TreeCanvas() {
       </div>
 
       {/* Controls for selecting nature elements */}
-      <div className="absolute bottom-20 md:bottom-0 flex justify-center space-x-4 z-[999999]">
+      <div className="absolute bottom-20 md:bottom-0 flex justify-center space-x-4 z-[999]">
         <button
           onClick={() => handleSelectElement("tree")}
           className="bg-primary-300 hover:bg-primary-300/80 font-bold text-white px-4 py-2 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg hover:shadow-2xl"
