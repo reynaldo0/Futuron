@@ -3,7 +3,7 @@ import { MapPin, Mail } from "lucide-react"; // Import the icons from lucide-rea
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-400">
+    <footer className="bg-primary-400 md:px-10">
       <div className="container mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 flex flex-col justify-between md:mb-0">

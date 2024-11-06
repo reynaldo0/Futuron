@@ -6,7 +6,7 @@ const GreenTech = () => {
   return (
     <>
       {/* Importance Section */}
-      <section className="py-24">
+      <section className="py-24  md:px-10">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
           {/* Left Column: Text Content */}
           <div className="md:w-1/2 mb-10 md:mb-0">
