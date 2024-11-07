@@ -34,7 +34,7 @@ const CommunityShowcase = () => {
             <img
               src={event.image}
               alt={event.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 md:h-60 object-cover"
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{event.name}</h3>
