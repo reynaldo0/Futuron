@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
 
         <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
-          Futoron adalah platfrom untuk menggabungkan teknologi ramah lingkungan untuk
+          Futuron adalah platfrom untuk menggabungkan teknologi ramah lingkungan untuk
           menyediakan berbagai informasi, illustrasi lingkungan hijau, berbagai data, serta menyediakan informasi event untuk berkolaborasi dengan tetap peduli pada lingkungan.
         </p>
 

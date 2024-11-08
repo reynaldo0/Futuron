@@ -36,7 +36,7 @@ const Simulations = () => {
           </p>
 
           {/* Earth Simulation */}
-          <div className="relative w-full h-96 mb-8 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <div className="relative w-full h-[550px] mb-8 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             {/* Background: Healthy Earth */}
             <motion.div
               className="absolute top-0 left-0 w-full h-full"
