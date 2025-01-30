@@ -13,7 +13,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h1 className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-widest md:pb-2 font-sans">
+        <h1
+          className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-widest md:pb-2 font-sans"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           FUTURON
         </h1>
 
@@ -22,8 +26,10 @@ const Hero = () => {
         </div>
 
         <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
-          Futoron adalah platfrom untuk menggabungkan teknologi ramah lingkungan untuk
-          menyediakan berbagai informasi, illustrasi lingkungan hijau, berbagai data, serta menyediakan informasi event untuk berkolaborasi dengan tetap peduli pada lingkungan.
+          Futoron adalah platfrom untuk menggabungkan teknologi ramah lingkungan
+          untuk menyediakan berbagai informasi, illustrasi lingkungan hijau,
+          berbagai data, serta menyediakan informasi event untuk berkolaborasi
+          dengan tetap peduli pada lingkungan.
         </p>
 
         <Link to="solutions" smooth={true} duration={500} offset={-50}>
