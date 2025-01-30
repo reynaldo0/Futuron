@@ -36,7 +36,7 @@ const Simulations = () => {
           </p>
 
           {/* Earth Simulation */}
-          <div className="relative w-full h-96 mb-8 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+          <div className="relative w-full h-[550px] mb-8 bg-gray-800 rounded-lg overflow-hidden shadow-lg">
             {/* Background: Healthy Earth */}
             <motion.div
               className="absolute top-0 left-0 w-full h-full"
@@ -84,7 +84,7 @@ const Simulations = () => {
             }}
           />
 
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 md:px-10">
             <span className="text-white font-bold hidden md:block">
               {SimulationsData.sliderLabels.damage}
             </span>
@@ -94,18 +94,17 @@ const Simulations = () => {
           </div>
 
           {/* Additional information below slider */}
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-left md:px-10">
             {SimulationsData.cards.map((card, index) => (
               <div
                 key={index}
                 className={`bg-white text-gray-900 border-[2.5px] ${card.borderColor} p-6 rounded-xl shadow-lg relative overflow-hidden group`}
               >
                 <h3
-                  className={`text-xl font-bold ${
-                    card.title === "Bumi Lestari"
+                  className={`text-xl font-bold ${card.title === "Bumi Lestari"
                       ? "text-primary-300"
                       : "text-red-700"
-                  } group-hover:text-primary-400 mb-2 relative z-10`}
+                    } group-hover:text-primary-400 mb-2 relative z-10`}
                 >
                   {card.title}
                 </h3>

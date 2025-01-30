@@ -176,12 +176,12 @@ const EventsSection = () => {
   };
 
   return (
-    <section className="py-16" id="events">
+    <section className="py-16 md:px-10" id="events">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-green-800 text-center mb-8">
           Acara Komunitas Teknologi Hijau
         </h2>
-        <p className="text-lg text-center text-gray-700 mb-12 md:px-24">
+        <p className="text-lg text-center text-gray-700 mb-12 md:px-32">
           Ikuti berbagai acara komunitas kami untuk memperluas pengetahuan dan
           terhubung dengan orang-orang yang memiliki visi yang sama dalam
           teknologi hijau.

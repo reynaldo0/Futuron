@@ -104,11 +104,11 @@ const Navbar = () => {
                         to={path}
                         className={`relative block rounded px-3 py-2 ${
                           isActive
-                            ? "text-primary-200 before:scale-x-100"
+                            ? "text-primary-200/90 before:scale-x-100"
                             : `${
                                 isScrolled ? "text-gray-900" : defaultTextColor
                               } hover:before:scale-x-100 hover:text-primary-400`
-                        } before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-300`}
+                        } before:absolute before:-bottom-2 before:left-0 before:h-[2.5px] before:w-full before:scale-x-0 before:bg-current before:opacity-0 before:transition before:content-[''] md:border-0 md:p-0 md:before:opacity-100 md:hover:bg-transparent md:hover:text-primary-100 md:dark:hover:bg-transparent md:dark:hover:text-primary-200`}
                       >
                         {linkNames[index]}
                       </Link>

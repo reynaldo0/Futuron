@@ -13,7 +13,7 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white  md:px-10">
       <ToastContainer className="z-[999999999]" /> {/* Menambahkan ToastContainer di sini */}
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-8">

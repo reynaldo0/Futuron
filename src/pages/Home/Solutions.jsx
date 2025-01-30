@@ -9,7 +9,7 @@ const TechnologySolutions = () => {
         <h2 className="text-4xl pt-20 md:text-5xl font-bold text-center mb-12">
           Solusi Teknologi
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  md:px-10">
           {SolutionsData.map((solution) => (
             <div
               key={solution.id}
