@@ -16,23 +16,26 @@ const Hero = () => {
         <h1
           className="text-5xl md:text-7xl mb-7 pt-12 font-bold md:font-bold tracking-widest md:pb-2 font-sans"
           data-aos="fade-up"
-          data-aos-duration="1000"
+          data-aos-duration="500"
         >
           FUTURON
         </h1>
 
-        <div className="relative w-full max-w-md mx-auto mb-6">
+        <div className="relative w-full max-w-md mx-auto mb-6" data-aos="fade-up"
+          data-aos-duration="700">
           <div className="absolute inset-x-5 top-1/2 border-t-4 border-primary-300" />
         </div>
 
-        <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8">
+        <p className="max-w-2xl text-lg md:text-xl pt-5 md:pt-0 mb-8" data-aos="fade-up"
+          data-aos-duration="900">
           Futoron adalah platfrom untuk menggabungkan teknologi ramah lingkungan
           untuk menyediakan berbagai informasi, illustrasi lingkungan hijau,
           berbagai data, serta menyediakan informasi event untuk berkolaborasi
           dengan tetap peduli pada lingkungan.
         </p>
 
-        <Link to="solutions" smooth={true} duration={500} offset={-50}>
+        <Link to="solutions" smooth={true} duration={500} offset={-50} data-aos="fade-up"
+          data-aos-duration="1050">
           <button className="bg-primary-300 rounded-full hover:bg-primary-300/80 text-white px-6 py-3 font-semibold ">
             Jelajahi Sekarang
           </button>
