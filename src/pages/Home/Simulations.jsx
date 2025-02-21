@@ -28,10 +28,12 @@ const Simulations = () => {
       <div className="bg-primary-200 pb-12">
         <div className="container mx-auto text-center px-4 md:px-0">
           {/* Title and Subtitle */}
-          <h2 className="text-3xl md:text-5xl pt-10 font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-5xl pt-10 font-bold text-white mb-8" data-aos="fade-up"
+          data-aos-duration="500">
             {SimulationsData.simulationDescription.title}
           </h2>
-          <p className="text-gray-100 mb-8">
+          <p className="text-gray-100 mb-8" data-aos="fade-up"
+          data-aos-duration="700">
             {SimulationsData.simulationDescription.subtitle}
           </p>
 
@@ -104,11 +106,13 @@ const Simulations = () => {
                   className={`text-xl font-bold ${card.title === "Bumi Lestari"
                       ? "text-primary-300"
                       : "text-red-700"
-                    } group-hover:text-primary-400 mb-2 relative z-10`}
+                    } group-hover:text-primary-400 mb-2 relative z-10`} data-aos="fade-up"
+          data-aos-duration="500"
                 >
                   {card.title}
                 </h3>
-                <p className="text-gray-700 group-hover:text-black relative z-10">
+                <p className="text-gray-700 group-hover:text-black relative z-10" data-aos="fade-up"
+          data-aos-duration="700">
                   {card.description}
                 </p>
 
